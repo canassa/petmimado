@@ -1228,6 +1228,10 @@ img {
   pointer-events: none;
 }
 
+#contact_form {
+    margin-bottom: 20px;
+}
+
 #contact_form label {
 	display: none;
 }
