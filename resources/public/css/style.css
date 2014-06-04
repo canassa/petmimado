@@ -105,7 +105,7 @@ img {
 	font-weight: 700;
 	text-transform: uppercase;
 	position: relative;
-	
+
 	-webkit-animation: Navbar 1.5s normal; /* Safari 4+ */
 	-moz-animation:    Navbar 1.5s normal; /* Fx 5+ */
 	-o-animation:      Navbar 1.5s normal; /* Opera 12+ */
@@ -551,12 +551,12 @@ img {
 }
 
 #carousel div:hover img {
-	-khtml-opacity:.20; 
-	-moz-opacity:.20; 
+	-khtml-opacity:.20;
+	-moz-opacity:.20;
 	-ms-filter:"alpha(opacity=20)";
 	filter:alpha(opacity=20);
 	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0.2);
-	opacity:.20; 
+	opacity:.20;
 	-webkit-transform: scale(1.3) rotate(7deg);
 	-moz-transform: scale(1.3) rotate(7deg);
 	transform: scale(1.3) rotate(7deg);
@@ -642,7 +642,7 @@ img {
 }
 
 #c-carousel .pager a.selected, #c-carousel .pager a:hover {
-	background: #65c178;	
+	background: #65c178;
 }
 
 
@@ -727,8 +727,8 @@ img {
 }
 
 .staff .member div span:hover img {
-	-khtml-opacity:.20; 
-	-moz-opacity:.20; 
+	-khtml-opacity:.20;
+	-moz-opacity:.20;
 	-ms-filter:"alpha(opacity=20)";
 	filter:alpha(opacity=20);
 	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0.2);
@@ -885,7 +885,7 @@ img {
 .services-single h2, .adoption-single h2 {
 	font-family: 'Lato', sans-serif;
 	font-size: 20px;
-	text-transform: none;	
+	text-transform: none;
 }
 
 .social-share {
@@ -995,12 +995,12 @@ img {
 }
 
 .adoption div:hover img {
-	-khtml-opacity:.20; 
-	-moz-opacity:.20; 
+	-khtml-opacity:.20;
+	-moz-opacity:.20;
 	-ms-filter:"alpha(opacity=20)";
 	filter:alpha(opacity=20);
 	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0.2);
-	opacity:.20; 
+	opacity:.20;
 	-webkit-transform: scale(1.3) rotate(7deg);
 	-moz-transform: scale(1.3) rotate(7deg);
 
@@ -1216,13 +1216,16 @@ img {
 }
 
 #map {
-	height: 490px;
+	position: relative;
+	width: 100%;
+	height: 500px;
 	margin: 70px 0;
 }
 
-#map * {
-	max-width: none;
-	width: auto;
+#map iframe {
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
 }
 
 #contact_form label {
@@ -1673,50 +1676,50 @@ img {
 /**  MEDIA QUERIES  **/
 
 @media (max-width: 1200px) {
-	
+
 	#home_carousel {
 		height: auto;
 	}
-	
+
 	#home_carousel .carousel-caption h2 {
 		font-size: 48px;
 	}
-	
+
 	.nav li a {
 		padding: 0 10px;
 	}
-	
-	
+
+
 	#home_carousel .carousel-caption h2 {
 		font-size: 40px;
 	}
-	
+
 	#home_carousel .carousel-caption p {
 		font-size: 18px;
 	}
-	
+
 	#c-carousel .pager {
 		margin-top: 20px;
 	}
-	
+
 	#c-carousel {
 		min-height: 305px;
 	}
-	
+
 	.contentpage #c-carousel .featured {
 		height: 256px;
 		padding: 20px;
 	}
-	
+
 	.contentpage #c-carousel img {
 		min-height: 256px;
 	}
-	
-	
+
+
 	.contentpage #c-carousel .pager {
 		margin-top: 50px;
 	}
-	
+
 }
 
 @media (max-width: 767px) {
@@ -1724,130 +1727,129 @@ img {
 	.navbar h1 {
 		margin-left: 15px;
 	}
-	
+
 	.navbar-nav {
 		float: none;
 		background: #65c178;
 		margin: 20px 0 0 0;
 	}
-	
+
 	.navbar-nav li.active {
 		color: #6d6d6d !important;
 	}
-	
+
 	.navbar-toggle {
 		margin-top: 20px;
 	}
-	
+
 	.navbar-collapse.collapse.in, .navbar-collapse.collapsing {
 		padding-left: 0;
 		padding-right: 0;
 	}
-	
+
 	.navbar-default .navbar-collapse {
 		border: none;
 		box-shadow: none;
 	}
-	
+
 	.navbar-default .navbar-collapse ul li {
 		margin: 0 0 10px 0;
 	}
-	
+
 	.navbar-nav .purchase-btn {
 		display: none;
 	}
-	
+
 	.homepage .affix .nav li a, .homepage .affix .nav li a:before {
 		color: #fff;
 	}
-	
+
 	.homepage .affix .nav li a:hover, .homepage .affix .nav li.active a {
 		color: #6d6d6d;
 	}
-	
+
 	.navbar-default .navbar-nav .open a, .navbar-default .navbar-nav .open a:hover, .navbar-default .navbar-nav .open a:focus {
 		color: #6d6d6d;
 	}
-	
+
 	.adoption div a img {
 		width: 100%;
 	}
-	
+
 	.purchase .purchase-button {
 		text-align: left;
 		margin-top: 30px;
 	}
-	
+
 	.purchase p {
 		line-height: 1.3em;
 	}
-	
+
 	.centered h3 {
 		width: 100%;
 		font-size: 26px;
 	}
-	
+
 	.rehome h4 {
 		font-size: 26px;
 	}
-	
+
 	#home_carousel .carousel-caption h2 {
 		font-size: 28px;
 		margin-top: 20px;
 	}
-	
+
 	#home_carousel .carousel-caption p, #home_carousel .btn, .carousel-control.right, .carousel-control.left {
 		display: none;
 	}
-	
+
 	.prev-next .prev-page, .prev-next .next-page {
 		width: 14px;
 		overflow: hidden;
 		height: 16px;
 	}
-	
+
 	.contentpage #c-carousel {
 		margin-top: 80px;
 	}
-	
+
 	.prices .costs {
 		margin-bottom: 20px;
 	}
-	
+
 	.contentpage #c-carousel .featured {
 		height: 260px;
 	}
-	
+
 	.services-single .col-md-6 {
 		margin-bottom: 20px;
 	}
-	
+
 	.social-share p {
 		float: none;
 		margin-bottom: 10px;
 	}
-	
+
 	.social-share .twitter-share-button {
 		margin-left: 0;
 	}
-	
+
 	.staff .member {
 		margin-bottom: 100px;
 	}
-	
+
 	.centered {
 		margin-top: 50px;
 	}
-	
+
 	#map {
 		height: 290px;
 		margin: 50px 0;
 	}
-	
+
 	.col-md-3 .contact-info {
 		padding: 0;
 		margin-top: 20px;
 	}
-	
+
 }
-  
