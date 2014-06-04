@@ -3,8 +3,12 @@
             [hiccup.form :refer [form-to submit-button]]))
 
 
-(defn navbar []
-  [:div {:class "navbar navbar-default navbar-fixed-top" :role "navigation"}
+(defn navbar [& args]
+  (let [nav-class (if (= (first args) :white)
+                    "navbar navbar-default navbar-fixed-top inner-pages affix"
+                    "navbar navbar-default navbar-fixed-top")]
+
+    [:div {:class nav-class :role "navigation"}
      [:div.container
       [:div.navbar-header
        [:button.navbar-toggle {:type "button" :data-toggle "collapsed" :data-target ".navbar-collapse"}
@@ -37,7 +41,7 @@
           [:li
            [:a {:href "a.html" :title "Adoption"} "Adoption"]]]]
         [:li
-         [:a {:href "/contact" :title "Contato"} [:span {:data-hover "Contato"} "Contato"]]]]]]])
+         [:a {:href "/contact" :title "Contato"} [:span {:data-hover "Contato"} "Contato"]]]]]]]))
 
 (def footer
   [:div.footer
@@ -74,7 +78,7 @@
       [:div.col-md-12.copyright
        [:p "&copy; Copyright 2014. All rights reserved." [:a {:href "#" :title ""} "PetMimado"]]]]]])
 
-(defn base [content]
+(defn base [content page]
   (html5
    [:head
     [:meta {:charset "utf-8"}]
@@ -86,7 +90,7 @@
     [:link {:rel "stylesheet" :href "css/style.css"}]
     [:link {:rel "stylesheet" :href "http://fonts.googleapis.com/css?family=Cabin:400,500,600,700,400italic,500italic,600italic,700italic"}]
     [:link {:rel "stylesheet" :href "http://fonts.googleapis.com/css?family=Lato:300,400,700,900,400italic,700italic,900italic"}]]
-   [:body.homepage
+   [:body {:class page}
     content
     footer
     [:script {:src "//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"}]
@@ -105,7 +109,7 @@
 
 (def contact-us
   (list
-   (navbar)
+   (navbar :white)
    ;; Contact
    [:div.container
     [:div.row
