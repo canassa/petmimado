@@ -2,7 +2,8 @@
 
 The http://petmimado.com website, implemented as a generated static site using
 [Stasis](https://github.com/magnars/stasis/) with frontend optimization using
-[Optimus](https://github.com/magnars/optimus).
+[Optimus](https://github.com/magnars/optimus) and [Hiccup](https://github.com/weavejester/hiccup)
+for HTML generation.
 
 
 ## Usage
