@@ -11,7 +11,10 @@
   (assets/load-assets "public" [#"\.(png|css|js)$"]))
 
 (def pages {"/index.html" (pages/base pages/home "homepage")
-            "/contact" (pages/base pages/contact-us "contentpage")})
+            "/contact" (pages/base pages/contact-us "contentpage")
+            "/tosa" (pages/base pages/services-single "contentpage")
+            "/banho" (pages/base pages/services-single "contentpage")
+            "/estetica" (pages/base pages/services-single "contentpage")})
 
 (def app (-> (stasis/serve-pages pages)
              (optimus/wrap get-assets optimizations/none serve-live-assets)))

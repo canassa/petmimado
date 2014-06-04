@@ -48,11 +48,11 @@
     [:div.container
      [:div.row
       [:div.col-md-3
-       [:h6 "A little about us"]
+       [:h6 "Um pouco sobre nós"]
        [:p [:strong "Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat."]]
        [:p "Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam."]]
       [:div.col-md-3.blog
-       [:h6 "Freshly blogged"]
+       [:h6 "Blog"]
        [:p.title [:a {:href "#" :title ""} "Eodem modo typi, qui nunc nobis"]]
        [:p "Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam."]
        [:p.title [:a {:href "#" :title ""} "Read this post&hellip;"]]]
@@ -65,7 +65,7 @@
         [:li [:a {:href "#" :title ""} "Termos e Condições"]]
         [:li [:a {:href "#" :title ""} "Política de Privacidade"]]]]
       [:div.col-md-3.contact-info
-       [:h6 "Keep in touch"]
+       [:h6 "Mantenha contato"]
        [:p "Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum."]
        [:p.social
         [:a.facebook {:href "#"}]
@@ -142,6 +142,26 @@
        [:li.address "R. Califórnia 693 São Paulo - SP"]
        [:li.mail "contato@petmimado.com"]]]]]))
 
+(def services-single
+  (list
+   (navbar :white)
+   [:div.container
+    [:div.row.services-single
+     [:div.col-md-6
+      [:img {:src "images/dog-walking.png" :alt "Dog walking"}]]
+     [:div.col-md-6
+      [:h2 "Dog walking services"]
+      [:p "Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi."]
+      [:p "Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum."]
+      [:div.hours
+       [:div
+        [:p.day [:strong "Morning"]]
+        [:p.time [:strong "8am - 11am"]]]
+       [:div
+        [:p.day [:strong "Morning"]]
+        [:p.time [:strong "8am - 11am"]]]
+       ]]]]))
+
 (def home
   (list
   (navbar)
@@ -177,19 +197,19 @@
     [:div.row
 
      [:div.col-md-4.col3
-      [:a#kennel.roundal {:href "services-single.html" :title "Tosa"}]
+      [:a#kennel.roundal {:href "/tosa" :title "Tosa"}]
       [:h3 "Tosa"]
       [:p "Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum. Humanitatis per seacula quarta decima et quinta decima."]
       (saiba-mais "btn-green")]
 
      [:div.col-md-4.col3
-      [:a#grooming.roundal {:href "services-single.html" :title "Banho"}]
+      [:a#grooming.roundal {:href "/banho" :title "Banho"}]
       [:h3 "Banho"]
       [:p "Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum. Humanitatis per seacula quarta decima et quinta decima."]
       (saiba-mais "btn-green")]
 
      [:div.col-md-4.col3
-      [:a#adoption.roundal {:href "services-single.html" :title "Estética"}]
+      [:a#adoption.roundal {:href "/estetica" :title "Estética"}]
       [:h3 "Estética"]
       [:p "Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum. Humanitatis per seacula quarta decima et quinta decima."]
       (saiba-mais "btn-green")]]
