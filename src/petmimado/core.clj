@@ -10,11 +10,13 @@
 (defn get-assets []
   (assets/load-assets "public" [#"\.(png|css|js)$"]))
 
-(def pages {"/index.html" (pages/base pages/home "homepage")
-            "/contact" (pages/base pages/contact-us "contentpage")
-            "/tosa" (pages/base pages/services-single "contentpage")
-            "/banho" (pages/base pages/services-single "contentpage")
-            "/estetica" (pages/base pages/services-single "contentpage")})
+(defn get-pages []
+  {"/index.html" (pages/base pages/home "homepage")
+   "/contact" (pages/base pages/contact-us "contentpage")
+   "/sobre" (pages/base pages/about "contentpage")
+   "/tosa" (pages/base (pages/services-single {:title "Tosa"}) "contentpage")
+   "/banho" (pages/base (pages/services-single {:title "Banho"}) "contentpage")
+   "/estetica" (pages/base (pages/services-single {:title "Estética"}) "contentpage")})
 
-(def app (-> (stasis/serve-pages pages)
+(def app (-> (stasis/serve-pages get-pages)
              (optimus/wrap get-assets optimizations/none serve-live-assets)))
