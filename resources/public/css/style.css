@@ -445,27 +445,27 @@ img {
 	background-color: #585858 !important;
 }
 
-.col3 .roundal#kennel {
+.kennel-img {
 	background: url("../images/services-kennel.png") 50% 50% no-repeat;
 }
 
-.col3 .roundal#grooming {
+.grooming-img {
 	background: url("../images/services-grooming.png") 50% 50% no-repeat;
 }
 
-.col3 .roundal#adoption {
+.adoption-img {
 	background: url("../images/services-adoption.png") 50% 50% no-repeat;
 }
 
-.col3 .roundal#walking {
+.walking-img {
 	background: url("../images/services-walking.png") 50% 50% no-repeat;
 }
 
-.col3 .roundal#advice {
+.advice-img {
 	background: url("../images/services-advice.png") 50% 50% no-repeat;
 }
 
-.col3 .roundal#play {
+.play-img {
 	background: url("../images/services-play.png") 50% 50% no-repeat;
 }
 
@@ -856,7 +856,7 @@ img {
 	margin: 0 20px 10px 20px;
 }
 
-.prices .costs div p.per-night {
+.per-night {
 	color: #65c178;
 	font-weight: 700;
 }

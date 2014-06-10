@@ -1,8 +1,48 @@
 (ns petmimado.pages
   (:require [petmimado.text :refer [text]]
+            [petmimado.urls :refer [urls]]
             [hiccup.page :refer [html5]]
             [hiccup.form :refer [form-to submit-button]]))
 
+
+
+
+(def services
+  [{:key :gromming
+    :url (:gromming urls)
+    :title (:gromming text)
+    :short-description (:gromming-short-description text)
+    :icon-class "kennel-img"}
+
+   {:key :bath
+    :url (:bath urls)
+    :title (:bath text)
+    :short-description (:bath-short-description text)
+    :icon-class "kennel-img"}
+
+   {:key :aesthetics
+    :url (:aesthetics urls)
+    :title (:aesthetics text)
+    :short-description (:aesthetics-short-description text)
+    :icon-class "kennel-img"}
+
+   {:key :rabbits
+    :url (:rabbits urls)
+    :title (:rabbits text)
+    :short-description (:rabbits-short-description text)
+    :icon-class "kennel-img"}
+
+   {:key :ferrets
+    :url (:ferrets urls)
+    :title (:ferrets text)
+    :short-description (:ferrets-short-description text)
+    :icon-class "kennel-img"}
+
+   {:key :guinea-pig
+    :url (:guinea-pig urls)
+    :title (:guinea-pig text)
+    :short-description (:guinea-pig-short-description text)
+    :icon-class "kennel-img"}])
 
 (defn navbar [& args]
   (let [nav-class (if (= (first args) :white)
@@ -24,25 +64,20 @@
       [:div.navbar-collapse.collapse
        [:ul.nav.navbar-nav
         [:li.active
-         [:a {:href "/" :title "Home"} [:span {:data-hover "Home"} "Home"]]]
+         [:a {:href (:home urls) :title "Home"} [:span {:data-hover "Home"} "Home"]]]
         [:li
          [:a {:href "/" :title "Preços"} [:span {:data-hover "Preços"} "Preços"]]]
         [:li
-         [:a {:href "/sobre" :title "Sobre nós"} [:span {:data-hover "Sobre nós"} "Sobre nós"]]]
+         [:a {:href (:about urls) :title "Sobre nós"} [:span {:data-hover "Sobre nós"} "Sobre nós"]]]
         [:li.dropdown
-         [:a.dropdown-toggle {:href "services.html" :data-toggle "dropdown"}
+         [:a.dropdown-toggle {:href "#" :data-toggle "dropdown"}
           [:span {:data-hover "Serviços"} "Serviços"] [:b.caret]]
          [:ul.dropdown-menu
-          [:li
-           [:a {:href "a.html" :title "Adoption"} "Adoption"]]
-          [:li
-           [:a {:href "a.html" :title "Adoption"} "Adoption"]]
-          [:li
-           [:a {:href "a.html" :title "Adoption"} "Adoption"]]
-          [:li
-           [:a {:href "a.html" :title "Adoption"} "Adoption"]]]]
+          (for [{url :url title :title} services]
+            [:li
+             [:a {:href url :title title} title]])]]
         [:li
-         [:a {:href "/contact" :title "Contato"} [:span {:data-hover "Contato"} "Contato"]]]]]]]))
+         [:a {:href (:contact urls) :title "Contato"} [:span {:data-hover "Contato"} "Contato"]]]]]]]))
 
 (def footer
   [:div.footer
@@ -160,7 +195,43 @@
        [:div
         [:p.day [:strong "Sábado e Domingo"]]
         [:p.time [:strong "11:00 - 18:00"]]]
-       ]]]]))
+       ]]]]
+
+   ;; Prices
+   [:div.prices.services {:data-stellar-background-ratio ".3"}
+    [:div.container
+     [:div.row
+      [:div.col-md-4.costs
+       [:div {:data-stellar-ratio "1.2" :data-stellar-vertical-offset "150" :data-stellar-horizontal-offset "0"}
+        [:img {:src "images/small-dog.png" :alt (:small-dog text)}]
+        [:h4 (:small-dog text)]
+        [:p "Tosa máquina - " [:span.per-night "R$ 12,00"]]
+        [:p "Tosa tesoura - " [:span.per-night "R$ 12,00"]]
+        [:p "Tosa padrão ou criativa - " [:span.per-night "R$ 12,00"]]
+        [:form {:method "get"}
+         [:button {:type "submit" :class "btn btn-default btn-green"} "Agende agora"]]]]
+
+      [:div.col-md-4.costs
+       [:div {:data-stellar-ratio "1.2" :data-stellar-vertical-offset "150" :data-stellar-horizontal-offset "0"}
+        [:img {:src "images/medium-dog.png" :alt (:medium-dog text)}]
+        [:h4 (:medium-dog text)]
+        [:p "Tosa máquina - " [:span.per-night "R$ 12,00"]]
+        [:p "Tosa tesoura - " [:span.per-night "R$ 12,00"]]
+        [:p "Tosa padrão ou criativa - " [:span.per-night "R$ 12,00"]]
+        [:form {:method "get"}
+         [:button {:type "submit" :class "btn btn-default btn-green"} "Agende agora"]]]]
+
+      [:div.col-md-4.costs
+       [:div {:data-stellar-ratio "1.2" :data-stellar-vertical-offset "150" :data-stellar-horizontal-offset "0"}
+        [:img {:src "images/large-dog.png" :alt (:large-dog text)}]
+        [:h4 (:large-dog text)]
+        [:p "Tosa máquina - " [:span.per-night "R$ 12,00"]]
+        [:p "Tosa tesoura - " [:span.per-night "R$ 12,00"]]
+        [:p "Tosa padrão ou criativa - " [:span.per-night "R$ 12,00"]]
+        [:form {:method "get"}
+         [:button {:type "submit" :class "btn btn-default btn-green"} "Agende agora"]]]]
+
+      ]]]))
 
 
 (def about
@@ -233,30 +304,18 @@
 
    ;; Services
    [:div.container
-    [:div.row
-
-     [:div.col-md-4.col3
-      [:a#kennel.roundal {:href "/tosa" :title (:gromming text)}]
-      [:h3 (:gromming text)]
-      [:p (:gromming-short-description text)]
-      (saiba-mais "btn-green")]
-
-     [:div.col-md-4.col3
-      [:a#grooming.roundal {:href "/banho" :title (:bath text)}]
-      [:h3 (:bath text)]
-      [:p (:bath-short-description text)]
-      (saiba-mais "btn-green")]
-
-     [:div.col-md-4.col3
-      [:a#adoption.roundal {:href "/estetica" :title (:aesthetics text)}]
-      [:h3 (:aesthetics text)]
-      [:p (:aesthetics-short-description text)]
-      (saiba-mais "btn-green")]]
-
+    (map #(vector :div.row %)
+         (partition 3
+                    (map (fn [{:keys [icon-class url title short-description]}]
+                           [:div.col-md-4.col3
+                            [:a.roundal {:class icon-class :href url :title title}]
+                            [:h3 title]
+                            [:p short-description]
+                            (saiba-mais "btn-green")]) services)))
     [:div.row
      [:div.col-md-12.centered
-      [:h3 [:span "Nossos clientes satisfeitos"]]
-      [:p "Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum."]]]]
+      [:h3 [:span (:our-customers text)]]
+      [:p (:our-customers-description text)]]]]
 
    ;; Carousel
    [:div#c-carousel
@@ -295,10 +354,8 @@
          [:li {:data-target "#home_testimonial" :data-slide-to "3"}]]
         [:div.carousel-inner
          [:div.item.active
-          [:p "Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum."]]
-         [:div.item
-          [:p "Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum."]]
-         [:div.item
-          [:p "Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum."]]
-         [:div.item
-          [:p "Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum."]]]]]]]]))
+          [:p (first (:testimonials text))]]
+         (map (fn [c]
+                [:div.item
+                 [:p c]])
+              (rest (:testimonials text)))]]]]]]))
