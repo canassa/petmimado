@@ -193,7 +193,7 @@ img {
 }
 
 .nav .dropdown-menu li a {
-	padding: 7px 20px;
+	/* padding: 7px 20px; @canassa: this is breaking the menu dropdown */
 	transition: all 0.5s ease;
 	-webkit-transition: all 0.5s ease;
 	-moz-transition: all 0.5s ease;
