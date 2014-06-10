@@ -1,5 +1,6 @@
 (ns petmimado.pages
-  (:require [hiccup.page :refer [html5]]
+  (:require [petmimado.text :refer [text]]
+            [hiccup.page :refer [html5]]
             [hiccup.form :refer [form-to submit-button]]))
 
 
@@ -142,7 +143,7 @@
        [:li.address "R. Califórnia 693 São Paulo - SP"]
        [:li.mail "contato@petmimado.com"]]]]]))
 
-(defn services-single [{:keys [title]}]
+(defn services-single [{:keys [title content]}]
   (list
    (navbar :white)
    [:div.container
@@ -151,16 +152,16 @@
       [:img {:src "images/dog-walking.png" :alt "Dog walking"}]]
      [:div.col-md-6
       [:h2 title]
-      [:p "Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi."]
-      [:p "Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum."]
+      (map (fn [p] [:p p]) content)
       [:div.hours
        [:div
-        [:p.day [:strong "Morning"]]
-        [:p.time [:strong "8am - 11am"]]]
+        [:p.day [:strong "Segunda à Sexta"]]
+        [:p.time [:strong "09:00 - 18:00"]]]
        [:div
-        [:p.day [:strong "Morning"]]
-        [:p.time [:strong "8am - 11am"]]]
+        [:p.day [:strong "Sábado e Domingo"]]
+        [:p.time [:strong "11:00 - 18:00"]]]
        ]]]]))
+
 
 (def about
   (list
@@ -214,14 +215,14 @@
     [:div.item.active
      [:img {:src "images/2.png" :alt ""}]
      [:div.carousel-caption
-      [:h2 "A melhor tosa do Brasil"]
-      [:p "Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum."]
+      [:h2 (:home-title-1 text)]
+      [:p (:home-subtitle-1 text)]
       (saiba-mais)]]
     [:div.item
      [:img {:src "images/3.png" :alt ""}]
      [:div.carousel-caption
-      [:h2 "Serviço personalizado"]
-      [:p "Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum."]
+      [:h2 (:home-title-2 text)]
+      [:p (:home-subtitle-2 text)]
       (saiba-mais)]]]
 
    ;; Controls
@@ -235,21 +236,21 @@
     [:div.row
 
      [:div.col-md-4.col3
-      [:a#kennel.roundal {:href "/tosa" :title "Tosa"}]
-      [:h3 "Tosa"]
-      [:p "Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum. Humanitatis per seacula quarta decima et quinta decima."]
+      [:a#kennel.roundal {:href "/tosa" :title (:gromming text)}]
+      [:h3 (:gromming text)]
+      [:p (:gromming-short-description text)]
       (saiba-mais "btn-green")]
 
      [:div.col-md-4.col3
-      [:a#grooming.roundal {:href "/banho" :title "Banho"}]
-      [:h3 "Banho"]
-      [:p "Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum. Humanitatis per seacula quarta decima et quinta decima."]
+      [:a#grooming.roundal {:href "/banho" :title (:bath text)}]
+      [:h3 (:bath text)]
+      [:p (:bath-short-description text)]
       (saiba-mais "btn-green")]
 
      [:div.col-md-4.col3
-      [:a#adoption.roundal {:href "/estetica" :title "Estética"}]
-      [:h3 "Estética"]
-      [:p "Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum. Humanitatis per seacula quarta decima et quinta decima."]
+      [:a#adoption.roundal {:href "/estetica" :title (:aesthetics text)}]
+      [:h3 (:aesthetics text)]
+      [:p (:aesthetics-short-description text)]
       (saiba-mais "btn-green")]]
 
     [:div.row
