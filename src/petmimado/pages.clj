@@ -4,9 +4,6 @@
             [hiccup.page :refer [html5]]
             [hiccup.form :refer [form-to submit-button]]))
 
-
-
-
 (def services
   [{:key :gromming
     :url (:gromming urls)
