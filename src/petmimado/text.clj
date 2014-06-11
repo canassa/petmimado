@@ -24,17 +24,25 @@
                             "É só dizer qual a sua idéia e nós vamos encontrar uma maneira de fazê-lo! (todo material usado é projetado especificamente para uso em animais de estimação não causando nenhum mal."]
    :aesthetics-short-description "Já pensou em ir para casa com um poodle rosa ou um maltês com mechas? Ou quem sabe um cão com tatuagens? Há muitas opções quando se trata de preparação criativa..."
 
+
+
    :rabbits "Coelhos"
-   :rabbits-description ["Coelhos"]
-   :rabbits-short-description "Coelhos"
+   :rabbits-description ["Coelhos podem tomar banho 3 vezes ao ano e devem ser tosados regularmente para evitar bolas de pelo no estomago. Tanto o banho quanto a tosa devem sempre ser feitas por um profissional que garanta o bem estar do seu coelhinho."
+                         "Aqui você encontra banho com shampoo especializado, banho a seco, tosa na máquina e na tesoura"
+                         "Para evitar estresse do animal, aceitamos apenas animais acostumados a serem manipulados"]
+   :rabbits-short-description "Coelhos podem tomar banho 3 vezes ao ano e devem ser tosados regularmente para evitar bolas de pelo no estomago..."
 
    :ferrets "Ferrets"
-   :ferrets-description ["Ferrets"]
-   :ferrets-short-description "Ferrets"
+   :ferrets-description ["Os furões adoram banho e precisam. Para quem ainda tem duvidas sobre Banho em Ferrets, saibam que a ACNE pode aparecer ocasionalmente em ferrets de qualquer idade. E que se manifesta inicialmente na ponta do rabo, causando eventual perda do pelame e que pode ser vista a olho nu, é tratada com banhos e xampu especifico. As dermatoses provém da falta de banhos, de limpezas, e não o contrário."
+                         "Aqui você encontra banho com shampoo especializado e banho a seco"
+                         "Portanto mantenha seu furão cheiroso e saudável, agende um horário par o seu amigo."]
+   :ferrets-short-description "Os ferrets adoram banho e precisam, eles podem tomar banhos geralmente a cada quinze dias com shampoo próprio..."
 
    :guinea-pig "Porquinhos-da-índia"
-   :guinea-pig-description ["Porquinhos-da-índia"]
-   :guinea-pig-short-description "Porquinhos-da-índia"
+   :guinea-pig-description ["A falta de higiene é a causa de muitos problemas de saúde em Porquinhos, por isso manter uma boa escovação, banhos, corte de unhas e aparar sua pelagem é essencial."
+                            "Aqui você encontra banho com shampoo especializado, banho a seco, tosa na máquina e na tesoura"
+                            "Para o bem estar do seu porquinho da índia, aceitamos apenas animais acostumados a serem manipulados"]
+   :guinea-pig-short-description "A falta de higiene é a causa de muitos problemas de saúde em Porquinhos, por isso manter uma boa escovação, banhos, corte de unhas e aparar sua pelagem é essencial..."
 
    :our-customers "Nossos clientes satisfeitos"
    :our-customers-description "Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum."
