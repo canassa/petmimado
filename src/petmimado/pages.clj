@@ -9,36 +9,42 @@
     :url (:gromming urls)
     :title (:gromming text)
     :short-description (:gromming-short-description text)
+    :description (:gromming-description text)
     :icon-class "kennel-img"}
 
    {:key :bath
     :url (:bath urls)
     :title (:bath text)
     :short-description (:bath-short-description text)
+    :description (:bath-description text)
     :icon-class "kennel-img"}
 
    {:key :aesthetics
     :url (:aesthetics urls)
     :title (:aesthetics text)
     :short-description (:aesthetics-short-description text)
+    :description (:aesthetics-description text)
     :icon-class "kennel-img"}
 
    {:key :rabbits
     :url (:rabbits urls)
     :title (:rabbits text)
     :short-description (:rabbits-short-description text)
+    :description (:rabbits-description text)
     :icon-class "kennel-img"}
 
    {:key :ferrets
     :url (:ferrets urls)
     :title (:ferrets text)
     :short-description (:ferrets-short-description text)
+    :description (:ferrets-description text)
     :icon-class "kennel-img"}
 
    {:key :guinea-pig
     :url (:guinea-pig urls)
     :title (:guinea-pig text)
     :short-description (:guinea-pig-short-description text)
+    :description (:guinea-pig-description text)
     :icon-class "kennel-img"}])
 
 (defn navbar [& args]
