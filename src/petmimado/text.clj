@@ -56,4 +56,7 @@
    :medium-dog "Cachorro médio"
    :large-dog "Cachorro grande"
 
+   :about-intro "Pet Mimado surgiu com uma nova proposta, unir a beleza ao bem estar. Estamos sempre preocupados em atender seu melhor amigo com todo conforto e segurança."
+   :about-cesar "Cesar é programador, web designer e fotógrafo. Ele é responsável pela concepção, criação e manutenção do site petmimado.com"
+   :about-maria "Além de ter cursado Estética Pet, fez especializações como tosa na tesoura, tosa japonesa, tosa da raça, ocorrências veterinárias no banho e tosa. Participou de Workshops com os principais Groomers do Brasil, como Flávio Fernandes e Willian Galharde."
    })

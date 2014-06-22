@@ -236,7 +236,6 @@
 
       ]]]))
 
-
 (def about
   (list
    (navbar :white)
@@ -244,7 +243,7 @@
     [:div.row
      [:div.col-md-12.centered
       [:h3 [:span "Sobre nós"]]
-      [:p "Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum."]]]]
+      [:p (:about-intro text)]]]]
    [:div.staff {:data-stellar-background-ratio ".3"}
     [:div.container
      [:div.row
@@ -255,7 +254,7 @@
          [:a.facebook {:href "#"}]
          [:img {:src "images/profile2.png" :alt ""}]]
         [:h4 "Maria Claudia"]
-        [:p "Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram."]]]
+        [:p (:about-maria text)]]]
       [:div.col-md-3.member.col-md-offset-1.member
        [:div {:data-stellar-ratio "1.2" :data-stellar-vertical-offset "150" :data-stellar-horizontal-offset "0"}
         [:span
@@ -263,7 +262,7 @@
          [:a.facebook {:href "#"}]
          [:img {:src "images/profile3.png" :alt ""}]]
         [:h4 "Cesar Canassa"]
-        [:p "Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram."]]]]]]
+        [:p (:about-cesar text)]]]]]]
    [:div.container.content
     [:div.row
      [:div.col-md-6
