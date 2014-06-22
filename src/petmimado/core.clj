@@ -15,8 +15,8 @@
 (defn get-pages []
   (merge
    {"/index.html" (pages/base pages/home "homepage")
-    "/contact" (pages/base pages/contact-us "contentpage")
-    "/sobre" (pages/base pages/about "contentpage")}
+    (:contact urls) (pages/base pages/contact-us "contentpage")
+    (:about urls) (pages/base pages/about "contentpage")}
 
    (into {}
          (map (fn [{:keys [key title description]}]
