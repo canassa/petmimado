@@ -48,22 +48,7 @@
     :title (:aesthetics text)
     :short-description (:aesthetics-short-description text)
     :description (:aesthetics-description text)
-    :icon-class "kennel-img"
-    :prices [{:title (:small-dog text)
-              :image "/images/small-dog.png"
-              :items [["Tosa máquina" "R$ 12,00"]
-                      ["Tosa tesoura" "R$ 12,00"]
-                      ["Tosa padrão ou criativa" "R$ 12,00"]]}
-             {:title (:medium-dog text)
-              :image "/images/medium-dog.png"
-              :items [["Tosa máquina" "R$ 12,00"]
-                      ["Tosa tesoura" "R$ 12,00"]
-                      ["Tosa padrão ou criativa" "R$ 12,00"]]}
-             {:title (:large-dog text)
-              :image "/images/large-dog.png"
-              :items [["Tosa máquina" "R$ 12,00"]
-                      ["Tosa tesoura" "R$ 12,00"]
-                      ["Tosa padrão ou criativa" "R$ 12,00"]]}]}
+    :icon-class "kennel-img"}
 
    {:key :rabbits
     :url (:rabbits urls)
@@ -256,20 +241,21 @@
        ]]]]
 
    ;; Prices
-   [:div.prices.services {:data-stellar-background-ratio ".3"}
-    [:div.container
-     [:div.row
-      (map (fn [{:keys [title image items]}]
-             [:div.col-md-4.costs
-              [:div {:data-stellar-ratio "1.2" :data-stellar-vertical-offset "150" :data-stellar-horizontal-offset "0"}
-               [:img {:src image :alt title}]
-               [:h4 title]
-               (map (fn [[desc value]]
-                      [:p (str desc " - ") [:span.per-night value]]) items)
-               [:form {:method "get"}
-                [:button {:type "submit" :class "btn btn-default btn-green"} "Agende agora"]]]])
-           (:prices service))
-      ]]]))
+   (when (:prices service)
+     [:div.prices.services {:data-stellar-background-ratio ".3"}
+      [:div.container
+       [:div.row
+        (map (fn [{:keys [title image items]}]
+               [:div.col-md-4.costs
+                [:div {:data-stellar-ratio "1.2" :data-stellar-vertical-offset "150" :data-stellar-horizontal-offset "0"}
+                 [:img {:src image :alt title}]
+                 [:h4 title]
+                 (map (fn [[desc value]]
+                        [:p (str desc " - ") [:span.per-night value]]) items)
+                 [:form {:method "get"}
+                  [:button {:type "submit" :class "btn btn-default btn-green"} "Agende agora"]]]])
+             (:prices service))
+        ]]])))
 
 (def about
   (list
