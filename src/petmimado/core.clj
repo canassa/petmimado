@@ -6,6 +6,7 @@
             [optimus.prime :as optimus]
             [optimus.assets :as assets]
             [optimus.optimizations :as optimizations]
+            [optimus.export]
             [optimus.strategies :refer [serve-live-assets]]))
 
 
@@ -26,6 +27,14 @@
                    {:title title
                     :content description}) "contentpage")])
               pages/services))))
+
+(defn export []
+  (let [assets (optimizations/none (get-assets) {})
+        pages (get-pages)
+        target-dir "build"]
+    (stasis/empty-directory! target-dir)
+    (optimus.export/save-assets assets target-dir)
+    (stasis/export-pages pages target-dir {:optimus-assets assets})))
 
 (def app (-> (stasis/serve-pages get-pages)
              (optimus/wrap get-assets optimizations/none serve-live-assets)))
