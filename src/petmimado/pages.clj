@@ -126,7 +126,7 @@
             :content "width=device-width, initial-scale=1.0"}]
     [:title "PetMimado | Tosa, Grooming"]
     [:link {:rel "stylesheet" :href "//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.0/css/bootstrap.min.css"}]
-    [:link {:rel "stylesheet" :href "css/style.css"}]
+    [:link {:rel "stylesheet" :href "/css/style.css"}]
     [:link {:rel "stylesheet" :href "http://fonts.googleapis.com/css?family=Cabin:400,500,600,700,400italic,500italic,600italic,700italic"}]
     [:link {:rel "stylesheet" :href "http://fonts.googleapis.com/css?family=Lato:300,400,700,900,400italic,700italic,900italic"}]]
    [:body {:class page}
@@ -138,7 +138,7 @@
     [:script {:src "//cdnjs.cloudflare.com/ajax/libs/stellar.js/0.6.2/jquery.stellar.min.js"}]
     [:script {:src "//cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/3.0.3a/ekko-lightbox.min.js"}]
     ;; [:script {:src "//cdnjs.cloudflare.com/ajax/libs/gmaps.js/0.4.12/gmaps.min.js"}]
-    [:script {:src "js/custom.js"}]]))
+    [:script {:src "/js/custom.js"}]]))
 
 (defn saiba-mais
   ([] (saiba-mais "btn-lg"))
@@ -187,7 +187,7 @@
    [:div.container
     [:div.row.services-single
      [:div.col-md-6
-      [:img {:src "images/dog-walking.png" :alt "Dog walking"}]]
+      [:img {:src "/images/dog-walking.png" :alt "Dog walking"}]]
      [:div.col-md-6
       [:h2 title]
       (map (fn [p] [:p p]) content)
@@ -206,7 +206,7 @@
      [:div.row
       [:div.col-md-4.costs
        [:div {:data-stellar-ratio "1.2" :data-stellar-vertical-offset "150" :data-stellar-horizontal-offset "0"}
-        [:img {:src "images/small-dog.png" :alt (:small-dog text)}]
+        [:img {:src "/images/small-dog.png" :alt (:small-dog text)}]
         [:h4 (:small-dog text)]
         [:p "Tosa máquina - " [:span.per-night "R$ 12,00"]]
         [:p "Tosa tesoura - " [:span.per-night "R$ 12,00"]]
@@ -216,7 +216,7 @@
 
       [:div.col-md-4.costs
        [:div {:data-stellar-ratio "1.2" :data-stellar-vertical-offset "150" :data-stellar-horizontal-offset "0"}
-        [:img {:src "images/medium-dog.png" :alt (:medium-dog text)}]
+        [:img {:src "/images/medium-dog.png" :alt (:medium-dog text)}]
         [:h4 (:medium-dog text)]
         [:p "Tosa máquina - " [:span.per-night "R$ 12,00"]]
         [:p "Tosa tesoura - " [:span.per-night "R$ 12,00"]]
@@ -226,7 +226,7 @@
 
       [:div.col-md-4.costs
        [:div {:data-stellar-ratio "1.2" :data-stellar-vertical-offset "150" :data-stellar-horizontal-offset "0"}
-        [:img {:src "images/large-dog.png" :alt (:large-dog text)}]
+        [:img {:src "/images/large-dog.png" :alt (:large-dog text)}]
         [:h4 (:large-dog text)]
         [:p "Tosa máquina - " [:span.per-night "R$ 12,00"]]
         [:p "Tosa tesoura - " [:span.per-night "R$ 12,00"]]
@@ -252,7 +252,7 @@
         [:span
          [:a.twitter {:href "#"}]
          [:a.facebook {:href "#"}]
-         [:img {:src "images/profile2.png" :alt ""}]]
+         [:img {:src "/images/profile2.png" :alt ""}]]
         [:h4 "Maria Claudia"]
         [:p (:about-maria text)]]]
       [:div.col-md-3.member.col-md-offset-1.member
@@ -260,7 +260,7 @@
         [:span
          [:a.twitter {:href "#"}]
          [:a.facebook {:href "#"}]
-         [:img {:src "images/profile3.png" :alt ""}]]
+         [:img {:src "/images/profile3.png" :alt ""}]]
         [:h4 "Cesar Canassa"]
         [:p (:about-cesar text)]]]]]]
    [:div.container.content
@@ -286,13 +286,13 @@
    ;; Wrapper for slides
    [:div.carousel-inner
     [:div.item.active
-     [:img {:src "images/2.png" :alt ""}]
+     [:img {:src "/images/2.png" :alt ""}]
      [:div.carousel-caption
       [:h2 (:home-title-1 text)]
       [:p (:home-subtitle-1 text)]
       (saiba-mais)]]
     [:div.item
-     [:img {:src "images/3.png" :alt ""}]
+     [:img {:src "/images/3.png" :alt ""}]
      [:div.carousel-caption
       [:h2 (:home-title-2 text)]
       [:p (:home-subtitle-2 text)]
@@ -324,23 +324,23 @@
     [:div#Wrapper
      [:div#carousel
       [:div
-       [:a.lightbox {:href "images/dog-1.png" :title "Dog" :data-hover "Sandy the west highland terrier" :data-toggle "lightbox"}
-        [:img {:src "images/dog-1.png" :alt "Dog"}]]]
+       [:a.lightbox {:href "/images/dog-1.png" :title "Dog" :data-hover "Sandy the west highland terrier" :data-toggle "lightbox"}
+        [:img {:src "/images/dog-1.png" :alt "Dog"}]]]
       [:div
-       [:a.lightbox {:href "images/dog-2.png" :title "Dog" :data-hover "Sandy the west highland terrier" :data-toggle "lightbox"}
-        [:img {:src "images/dog-2.png" :alt "Dog"}]]]
+       [:a.lightbox {:href "/images/dog-2.png" :title "Dog" :data-hover "Sandy the west highland terrier" :data-toggle "lightbox"}
+        [:img {:src "/images/dog-2.png" :alt "Dog"}]]]
       [:div
-       [:a.lightbox {:href "images/dog-3.png" :title "Dog" :data-hover "Sandy the west highland terrier" :data-toggle "lightbox"}
-        [:img {:src "images/dog-3.png" :alt "Dog"}]]]
+       [:a.lightbox {:href "/images/dog-3.png" :title "Dog" :data-hover "Sandy the west highland terrier" :data-toggle "lightbox"}
+        [:img {:src "/images/dog-3.png" :alt "Dog"}]]]
       [:div
-       [:a.lightbox {:href "images/dog-1.png" :title "Dog" :data-hover "Sandy the west highland terrier" :data-toggle "lightbox"}
-        [:img {:src "images/dog-1.png" :alt "Dog"}]]]
+       [:a.lightbox {:href "/images/dog-1.png" :title "Dog" :data-hover "Sandy the west highland terrier" :data-toggle "lightbox"}
+        [:img {:src "/images/dog-1.png" :alt "Dog"}]]]
       [:div
-       [:a.lightbox {:href "images/dog-2.png" :title "Dog" :data-hover "Sandy the west highland terrier" :data-toggle "lightbox"}
-        [:img {:src "images/dog-2.png" :alt "Dog"}]]]
+       [:a.lightbox {:href "/images/dog-2.png" :title "Dog" :data-hover "Sandy the west highland terrier" :data-toggle "lightbox"}
+        [:img {:src "/images/dog-2.png" :alt "Dog"}]]]
       [:div
-       [:a.lightbox {:href "images/dog-3.png" :title "Dog" :data-hover "Sandy the west highland terrier" :data-toggle "lightbox"}
-        [:img {:src "images/dog-3.png" :alt "Dog"}]]]]
+       [:a.lightbox {:href "/images/dog-3.png" :title "Dog" :data-hover "Sandy the west highland terrier" :data-toggle "lightbox"}
+        [:img {:src "/images/dog-3.png" :alt "Dog"}]]]]
      [:div#pager.pager]]]
 
    ;; Testimonials
