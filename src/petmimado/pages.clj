@@ -10,42 +10,97 @@
     :title (:gromming text)
     :short-description (:gromming-short-description text)
     :description (:gromming-description text)
-    :icon-class "kennel-img"}
+    :icon-class "kennel-img"
+    :prices [{:title (:small-dog text)
+              :image "/images/small-dog.png"
+              :items [["Tosa máquina" "R$ 20,00"]
+                      ["Tosa tesoura" "R$ 30,00"]
+                      ["Tosa padrão ou criativa" "R$ 40,00"]]}
+             {:title (:medium-dog text)
+              :image "/images/medium-dog.png"
+              :items [["Tosa máquina" "R$ 30,00"]
+                      ["Tosa tesoura" "R$ 40,00"]
+                      ["Tosa padrão ou criativa" "R$ 50,00"]]}
+             {:title (:large-dog text)
+              :image "/images/large-dog.png"
+              :items [["Tosa máquina" "R$ 40,00"]
+                      ["Tosa tesoura" "R$ 50,00"]
+                      ["Tosa padrão ou criativa" "R$ 60,00"]]}]}
 
    {:key :bath
     :url (:bath urls)
     :title (:bath text)
     :short-description (:bath-short-description text)
     :description (:bath-description text)
-    :icon-class "kennel-img"}
+    :icon-class "kennel-img"
+    :prices [{:title (:small-dog text)
+              :image "/images/small-dog.png"
+              :items [["Banho" "R$ 30,00"]]}
+             {:title (:medium-dog text)
+              :image "/images/medium-dog.png"
+              :items [["Banho" "R$ 40,00"]]}
+             {:title (:large-dog text)
+              :image "/images/large-dog.png"
+              :items [["Banho" "R$ 50,00"]]}]}
 
    {:key :aesthetics
     :url (:aesthetics urls)
     :title (:aesthetics text)
     :short-description (:aesthetics-short-description text)
     :description (:aesthetics-description text)
-    :icon-class "kennel-img"}
+    :icon-class "kennel-img"
+    :prices [{:title (:small-dog text)
+              :image "/images/small-dog.png"
+              :items [["Tosa máquina" "R$ 12,00"]
+                      ["Tosa tesoura" "R$ 12,00"]
+                      ["Tosa padrão ou criativa" "R$ 12,00"]]}
+             {:title (:medium-dog text)
+              :image "/images/medium-dog.png"
+              :items [["Tosa máquina" "R$ 12,00"]
+                      ["Tosa tesoura" "R$ 12,00"]
+                      ["Tosa padrão ou criativa" "R$ 12,00"]]}
+             {:title (:large-dog text)
+              :image "/images/large-dog.png"
+              :items [["Tosa máquina" "R$ 12,00"]
+                      ["Tosa tesoura" "R$ 12,00"]
+                      ["Tosa padrão ou criativa" "R$ 12,00"]]}]}
 
    {:key :rabbits
     :url (:rabbits urls)
     :title (:rabbits text)
     :short-description (:rabbits-short-description text)
     :description (:rabbits-description text)
-    :icon-class "kennel-img"}
+    :icon-class "kennel-img"
+    :prices [{:title (:bath text)
+              :image "/images/small-dog.png"
+              :items [[(:bath text) "R$ 30,00"]]}
+             {:title (:gromming text)
+              :image "/images/medium-dog.png"
+              :items [[(:gromming text) "R$ 40,00"]]}]}
 
    {:key :ferrets
     :url (:ferrets urls)
     :title (:ferrets text)
     :short-description (:ferrets-short-description text)
     :description (:ferrets-description text)
-    :icon-class "kennel-img"}
+    :icon-class "kennel-img"
+    :prices [{:title (:bath text)
+              :image "/images/small-dog.png"
+              :items [[(:bath text) "R$ 30,00"]]}]}
 
    {:key :guinea-pig
     :url (:guinea-pig urls)
     :title (:guinea-pig text)
     :short-description (:guinea-pig-short-description text)
     :description (:guinea-pig-description text)
-    :icon-class "kennel-img"}])
+    :icon-class "kennel-img"
+    :prices [{:title (:bath text)
+              :image "/images/small-dog.png"
+              :items [[(:bath text) "R$ 30,00"]]}
+             {:title (:gromming text)
+              :image "/images/medium-dog.png"
+              :items [[(:gromming text) "R$ 40,00"]]}]}
+   ])
 
 (defn navbar [& args]
   (let [nav-class (if (= (first args) :white)
@@ -69,7 +124,7 @@
         [:li.active
          [:a {:href (:home urls) :title "Home"} [:span {:data-hover "Home"} "Home"]]]
         [:li
-         [:a {:href "/" :title "Preços"} [:span {:data-hover "Preços"} "Preços"]]]
+         [:a {:href (:plans urls) :title (:plans text)} [:span {:data-hover (:plans text)} (:plans text)]]]
         [:li
          [:a {:href (:about urls) :title "Sobre nós"} [:span {:data-hover "Sobre nós"} "Sobre nós"]]]
         [:li.dropdown
@@ -181,7 +236,7 @@
        [:li.address "R. Califórnia 693 São Paulo - SP"]
        [:li.mail "contato@petmimado.com"]]]]]))
 
-(defn services-single [{:keys [title content]}]
+(defn services-single [service]
   (list
    (navbar :white)
    [:div.container
@@ -189,8 +244,8 @@
      [:div.col-md-6
       [:img {:src "/images/dog-walking.png" :alt "Dog walking"}]]
      [:div.col-md-6
-      [:h2 title]
-      (map (fn [p] [:p p]) content)
+      [:h2 (:title service)]
+      (map (fn [p] [:p p]) (:content service))
       [:div.hours
        [:div
         [:p.day [:strong "Segunda à Sexta"]]
@@ -204,36 +259,16 @@
    [:div.prices.services {:data-stellar-background-ratio ".3"}
     [:div.container
      [:div.row
-      [:div.col-md-4.costs
-       [:div {:data-stellar-ratio "1.2" :data-stellar-vertical-offset "150" :data-stellar-horizontal-offset "0"}
-        [:img {:src "/images/small-dog.png" :alt (:small-dog text)}]
-        [:h4 (:small-dog text)]
-        [:p "Tosa máquina - " [:span.per-night "R$ 12,00"]]
-        [:p "Tosa tesoura - " [:span.per-night "R$ 12,00"]]
-        [:p "Tosa padrão ou criativa - " [:span.per-night "R$ 12,00"]]
-        [:form {:method "get"}
-         [:button {:type "submit" :class "btn btn-default btn-green"} "Agende agora"]]]]
-
-      [:div.col-md-4.costs
-       [:div {:data-stellar-ratio "1.2" :data-stellar-vertical-offset "150" :data-stellar-horizontal-offset "0"}
-        [:img {:src "/images/medium-dog.png" :alt (:medium-dog text)}]
-        [:h4 (:medium-dog text)]
-        [:p "Tosa máquina - " [:span.per-night "R$ 12,00"]]
-        [:p "Tosa tesoura - " [:span.per-night "R$ 12,00"]]
-        [:p "Tosa padrão ou criativa - " [:span.per-night "R$ 12,00"]]
-        [:form {:method "get"}
-         [:button {:type "submit" :class "btn btn-default btn-green"} "Agende agora"]]]]
-
-      [:div.col-md-4.costs
-       [:div {:data-stellar-ratio "1.2" :data-stellar-vertical-offset "150" :data-stellar-horizontal-offset "0"}
-        [:img {:src "/images/large-dog.png" :alt (:large-dog text)}]
-        [:h4 (:large-dog text)]
-        [:p "Tosa máquina - " [:span.per-night "R$ 12,00"]]
-        [:p "Tosa tesoura - " [:span.per-night "R$ 12,00"]]
-        [:p "Tosa padrão ou criativa - " [:span.per-night "R$ 12,00"]]
-        [:form {:method "get"}
-         [:button {:type "submit" :class "btn btn-default btn-green"} "Agende agora"]]]]
-
+      (map (fn [{:keys [title image items]}]
+             [:div.col-md-4.costs
+              [:div {:data-stellar-ratio "1.2" :data-stellar-vertical-offset "150" :data-stellar-horizontal-offset "0"}
+               [:img {:src image :alt title}]
+               [:h4 title]
+               (map (fn [[desc value]]
+                      [:p (str desc " - ") [:span.per-night value]]) items)
+               [:form {:method "get"}
+                [:button {:type "submit" :class "btn btn-default btn-green"} "Agende agora"]]]])
+           (:prices service))
       ]]]))
 
 (def about
@@ -317,7 +352,8 @@
     [:div.row
      [:div.col-md-12.centered
       [:h3 [:span (:our-customers text)]]
-      [:p (:our-customers-description text)]]]]
+      ;[:p (:our-customers-description text)]
+      ]]]
 
    ;; Carousel
    [:div#c-carousel

@@ -6,7 +6,7 @@
    :home-title-2 "Banho e Tosa sem gaiola"
    :home-subtitle-2 "Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum."
 
-
+   :plans "Planos"
 
    :gromming "Tosa"
    :gromming-description ["A tosa de cães é, acima de tudo, uma questão de higiene e saúde, tanto para o animal, quanto para o seu dono, uma vez que o excesso de pelos pode gerar o acúmulo de fungos, bactérias e parasitas, nocivos para a saúde do bichinho e de seu dono."

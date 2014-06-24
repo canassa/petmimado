@@ -3,6 +3,7 @@
 (def urls
   {:home "/"
    :contact "/contact/"
+   :plans "/planos/"
    :about "/sobre/"
 
    ;; Services

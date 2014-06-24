@@ -20,12 +20,10 @@
     (:about urls) (pages/base pages/about "contentpage")}
 
    (into {}
-         (map (fn [{:keys [key title description]}]
-                [(key urls)
+         (map (fn [service]
+                [((:key service) urls)
                  (pages/base
-                  (pages/services-single
-                   {:title title
-                    :content description}) "contentpage")])
+                  (pages/services-single service) "contentpage")])
               pages/services))))
 
 (defn export []
