@@ -12,4 +12,5 @@
    :aesthetics "/estetica/"
    :rabbits "/coelhos/"
    :ferrets "/ferrets/"
-   :guinea-pig "/porquinho-da-india/"})
+   :guinea-pig "/porquinho-da-india/"
+   :training "/treinamento/"})

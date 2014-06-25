@@ -3,8 +3,8 @@
 (def text
   {:home-title-1 "Serviço Personalizado"
    :home-subtitle-1 "Pet Mimado é um salão de pet grooming único, localizado no Brooklin, zona sul de São Paulo. Atendemos apenas um animal de estimação por vez com ambiente confortável e tranquilo sem o uso de gaiolas. Aceitamos todas as raças, incluindo gatos, coelhos, ferrets e porquinho da índia. Atendemos apenas com horário marcado."
-   :home-title-2 "Banho e Tosa sem gaiola"
-   :home-subtitle-2 "Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum."
+   :home-title-2 "Treinamento para Pet Shop"
+   :home-subtitle-2 "Para você que possuiu um Pet Shop e quer oferecer o melhor aos seus clientes, Pet Mimado oferece treinamento aos funcionários ensinando o passo a passo de todas as novidades que estão no mercado."
 
    :plans "Planos"
 
@@ -44,17 +44,27 @@
                             "Para o bem estar do seu porquinho da índia, aceitamos apenas animais acostumados a serem manipulados"]
    :guinea-pig-short-description "A falta de higiene é a causa de muitos problemas de saúde em Porquinhos, por isso manter uma boa escovação, banhos, corte de unhas e aparar sua pelagem é essencial..."
 
+   :training "Treinamento"
+   :training-description ["Para você que possuiu um Pet Shop e quer oferecer o melhor aos seus clientes, Pet Mimado oferece treinamento aos funcionários ensinando o passo a passo de todas as novidades que estão no mercado. Nosso treinamento inclui: Manipulação correta dos pets, Quais os produtos certos para cada animal, Banho e tosa em coelhos e porquinho da índia, Banho em ferrets, procedimentos estéticos, Tosas criativas."]
+   :training-short-description "A falta de higiene é a causa de muitos problemas de saúde em Porquinhos, por isso manter uma boa escovação, banhos, corte de unhas e aparar sua pelagem é essencial..."
+
+
    :our-customers "Nossos clientes satisfeitos"
    :our-customers-description "Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum."
 
-   :testimonials ["Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum."
-                  "Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum."
-                  "Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum."
-                  "Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum."]
+   :testimonials ["É difícil encontrar um bom groomer que trata bem seu cão e sabe como dar um bom banho e corte! Claudia faz as duas coisas. Meu cão sempre fica muito cheiroso e dura a semana toda. Aliás ele ama ela."
+                  "Minha pequena é muito agitada e sempre sofreu indo aos pets shops, pois eu percebia que ela voltava muito triste"
+                  "É impressionante a paciência da Claudia, sempre dando pausas para que ela não fique estressada e fazendo tudo com muita calma. Minha pequena sempre volta feliz e com um quitute na boca....rs"
+                  "Depois que conheci a Claudia, não levo meu Ralph a nenhum outro lugar. O jeito amoroso e dedicado que ela o trata não tem comparação. Indico a todos que não querem levar seu bichinho a lugares que tratam nossas fofuras como mais um. Recomendo."]
 
    :small-dog "Cachorro pequeno"
    :medium-dog "Cachorro médio"
    :large-dog "Cachorro grande"
+
+   :contact-intro "Estamos localizados em São Paulo, Zona Sul próximos as Avenidas Bandeirantes, Berrine e Santo Amaro, local de fácil acesso, tranquilo e com estacionamento ao lado."
+
+   :phone "(11) 98934-4224"
+   :email "contato@petmimado.com"
 
    :about-intro "Pet Mimado surgiu com uma nova proposta, unir a beleza ao bem estar. Estamos sempre preocupados em atender seu melhor amigo com todo conforto e segurança."
    :about-cesar "Cesar é programador, web designer e fotógrafo. Ele é responsável pela concepção, criação e manutenção do site petmimado.com"

@@ -5,7 +5,23 @@
             [hiccup.form :refer [form-to submit-button]]))
 
 (def services
-  [{:key :gromming
+  [{:key :bath
+    :url (:bath urls)
+    :title (:bath text)
+    :short-description (:bath-short-description text)
+    :description (:bath-description text)
+    :icon-class "kennel-img"
+    :prices [{:title (:small-dog text)
+              :image "/images/small-dog.png"
+              :items [["Banho" "R$ 30,00"]]}
+             {:title (:medium-dog text)
+              :image "/images/medium-dog.png"
+              :items [["Banho" "R$ 40,00"]]}
+             {:title (:large-dog text)
+              :image "/images/large-dog.png"
+              :items [["Banho" "R$ 50,00"]]}]}
+
+   {:key :gromming
     :url (:gromming urls)
     :title (:gromming text)
     :short-description (:gromming-short-description text)
@@ -26,22 +42,6 @@
               :items [["Tosa máquina" "R$ 40,00"]
                       ["Tosa tesoura" "R$ 50,00"]
                       ["Tosa padrão ou criativa" "R$ 60,00"]]}]}
-
-   {:key :bath
-    :url (:bath urls)
-    :title (:bath text)
-    :short-description (:bath-short-description text)
-    :description (:bath-description text)
-    :icon-class "kennel-img"
-    :prices [{:title (:small-dog text)
-              :image "/images/small-dog.png"
-              :items [["Banho" "R$ 30,00"]]}
-             {:title (:medium-dog text)
-              :image "/images/medium-dog.png"
-              :items [["Banho" "R$ 40,00"]]}
-             {:title (:large-dog text)
-              :image "/images/large-dog.png"
-              :items [["Banho" "R$ 50,00"]]}]}
 
    {:key :aesthetics
     :url (:aesthetics urls)
@@ -85,6 +85,13 @@
              {:title (:gromming text)
               :image "/images/medium-dog.png"
               :items [[(:gromming text) "R$ 40,00"]]}]}
+
+   {:key :training
+    :url (:training urls)
+    :title (:training text)
+    :short-description (:training-short-description text)
+    :description (:training-description text)
+    :icon-class "kennel-img"}
    ])
 
 (defn navbar [& args]
@@ -181,9 +188,9 @@
     [:script {:src "/js/custom.js"}]]))
 
 (defn saiba-mais
-  ([] (saiba-mais "btn-lg"))
-  ([klass]
-    (form-to [:get "index.html"]
+  ([url] (saiba-mais url "btn-lg"))
+  ([url klass]
+    (form-to [:get url]
       (submit-button {:class (str "btn btn-default " klass)} "Saiba mais"))))
 
 (def contact-us
@@ -194,7 +201,7 @@
     [:div.row
      [:div.col-md-12.centered
       [:h3 [:span "Contato"]]
-      [:p "Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum."]]]]
+      [:p  (:contact-intro text)]]]]
 
    ;; Map
    [:div#map
@@ -217,9 +224,9 @@
        [:button.btn.btn-default.btn-green {:type "submit" } "Enviar"]]]
      [:div.col-md-3
       [:ul.contact-info
-       [:li.telephone "(11) 2628-7129"]
+       [:li.telephone (:phone text)]
        [:li.address "R. Califórnia 693 São Paulo - SP"]
-       [:li.mail "contato@petmimado.com"]]]]]))
+       [:li.mail (:email text)]]]]]))
 
 (defn services-single [service]
   (list
@@ -230,14 +237,14 @@
       [:img {:src "/images/dog-walking.png" :alt "Dog walking"}]]
      [:div.col-md-6
       [:h2 (:title service)]
-      (map (fn [p] [:p p]) (:content service))
+      (map (fn [p] [:p p]) (:description service))
       [:div.hours
        [:div
         [:p.day [:strong "Segunda à Sexta"]]
-        [:p.time [:strong "09:00 - 18:00"]]]
+        [:p.time [:strong "09:00 - 20:00"]]]
        [:div
         [:p.day [:strong "Sábado e Domingo"]]
-        [:p.time [:strong "11:00 - 18:00"]]]
+        [:p.time [:strong "11:00 - 20:00"]]]
        ]]]]
 
    ;; Prices
@@ -288,12 +295,25 @@
     [:div.row
      [:div.col-md-6
       [:h3 [:span "Sobre o nosso Banho & Tosa"]]
-      [:p "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat."]
-      [:p "Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem."]]
+      [:p "Nós oferecemos uma grande variedade de serviços de Pet Grooming para cuidar de seu animal de estimação. Experimente um banho relaxante de cupuaçu e maracujá ou uma hidratação de coco que irá adicionar a úmidade de volta para a pele e pelagem do seu animal de estimação. "]
+      [:p "Fazer Pawdicure que vai matar o fungo das patinhas e suavizar as almofadas do seu animal (ótimo para cães com alergias), ou obter um estilo completo com um corte de pelos a seu gosto. "]
+      [:p "Durante a secagem os pets recebem uma massagem relaxante, os que podem e gostam se distraem com quitutes caninos."]
+      [:p "Você pode optar por uma tosa padrão ( da raça) ou o serviço de styling criativo para aqueles que adoram dar um estilo único ao seu pet."]
+      [:p "Considere mechas coloridas, Soft Claws (Unhas de vinil), cauterização, pintura de unhas, tatuagens para todos, ou adicionar alguma cor a cauda do seu animal de estimação, orelhas, cabeça ou todo o seu corpo! Se você quiser, podemos fazê-lo, tudo que você tem a fazer é pedir!"]]
      [:div.col-md-6
-      [:h3 [:span "Nossa missão"]]
-      [:p "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat."]
-      [:p "Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem."]]]]))
+      [:h3 [:span "Política do Banho e Tosa"]]
+      [:p "Pet Mimado é uma entidade privada e para manter as coisas acontecendo tranquilamente, pedimos que nossos clientes sigam estas regras:"]
+      [:ol
+       [:li "Todos os animais devem estar em dia com sua carteirinha de vacinação e esta deve ser entregue a groomer no momento do banho e tosa."]
+       [:li "Os clientes devem chegar na hora, existindo uma tolerância de 10 minutos de atraso, caso ultrapasse este tempo seu horário será doado a outro cliente."]
+       [:li "Todos os clientes devem fornecer, nome, telefone e e-mail para contato."]
+       [:li "Os clientes devem buscar os pets no horário designado, existindo uma tolerância de 10 minutos, ultrapassando este tempo será cobrada taxa extra."]
+       [:li "Cancelamentos devem ser feitos com 24 hrs de antecedência."]
+       [:li "Qualquer animal de estimação que se encontre com pulgas e carrapatos, será tratado com capstar, banho antipulgas e cobrado á parte."]
+       [:li "Por favor, informe-nos de qualquer problema de saúde que seu animal de estimação tenha, para que possamos mantê-lo o mais confortável possível."]
+       [:li "Não é permitido que o proprietário fique com o animal de estimação durante o banho e tosa. Isto é para a segurança de todos."]]
+      [:p "Se você tiver alguma dúvida ou preocupação , não hesite em perguntar! Essas políticas são feitas para manter todos seguros e felizes, e para assegurar que os nossos clientes não sejam incomodados."]]]]))
+
 
 (def home
   (list
@@ -311,13 +331,13 @@
      [:div.carousel-caption
       [:h2 (:home-title-1 text)]
       [:p (:home-subtitle-1 text)]
-      (saiba-mais)]]
+      (saiba-mais "/")]]
     [:div.item
      [:img {:src "/images/3.png" :alt ""}]
      [:div.carousel-caption
       [:h2 (:home-title-2 text)]
       [:p (:home-subtitle-2 text)]
-      (saiba-mais)]]]
+      (saiba-mais (:training urls))]]]
 
    ;; Controls
    [:a.left.carousel-control {:href "#home_carousel" :data-slide "prev"}
@@ -334,7 +354,7 @@
                             [:a.roundal {:class icon-class :href url :title title}]
                             [:h3 title]
                             [:p short-description]
-                            (saiba-mais "btn-green")]) services)))
+                            (saiba-mais "/" "btn-green")]) services)))
     [:div.row
      [:div.col-md-12.centered
       [:h3 [:span (:our-customers text)]]

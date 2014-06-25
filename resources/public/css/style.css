@@ -932,11 +932,16 @@ img {
 }
 
 #home_testimonial {
-	padding: 50px 0 120px;
+	padding: 0px;
 }
 
 #home_testimonial .carousel-indicators {
-	bottom: 50px;
+	bottom: 10px;
+}
+
+#home_testimonial .carousel-inner {
+  height: 145px;
+  margin-top: 40px;
 }
 
 #home_testimonial .item p {
