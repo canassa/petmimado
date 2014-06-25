@@ -139,9 +139,10 @@
        [:p "Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam."]]
       [:div.col-md-3.blog
        [:h6 "Blog"]
-       [:p.title [:a {:href "#" :title ""} "Eodem modo typi, qui nunc nobis"]]
-       [:p "Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam."]
-       [:p.title [:a {:href "#" :title ""} "Read this post&hellip;"]]]
+       [:p.title [:a {:href "#" :title ""} "Em construção..."]]
+       ;[:p "Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam."]
+       ;[:p.title [:a {:href "#" :title ""} "Read this post&hellip;"]]
+       ]
       [:div.col-md-3
        [:h6 "Você pode precisar disso"]
        [:ul
@@ -158,8 +159,8 @@
         [:a.pinterest {:href "#"}]
         [:a.twitter {:href "#"}]]
        [:p.c-details
-        [:span "Mail"] [:a {:href "#"} "info@petcare.com"] [:br]
-        [:span "Tel"] "0203 000 444"]]]
+        [:span "Mail"] [:a {:href "#"} (:email text)] [:br]
+        [:span "Tel"] (:phone text)]]]
      [:div.row
       [:div.col-md-12.copyright
        [:p "&copy; Copyright 2014. All rights reserved." [:a {:href "#" :title ""} "PetMimado"]]]]]])
@@ -403,3 +404,21 @@
                 [:div.item
                  [:p c]])
               (rest (:testimonials text)))]]]]]]))
+
+(def plans
+  (base
+   (services-single {:key :bath
+                     :url (:bath urls)
+                     :title (:bath text)
+                     :short-description (:bath-short-description text)
+                     :description (:bath-description text)
+                     :icon-class "kennel-img"
+                     :prices [{:title (:small-dog text)
+                               :image "/images/small-dog.png"
+                               :items [["Banho" "R$ 30,00"]]}
+                              {:title (:medium-dog text)
+                               :image "/images/medium-dog.png"
+                               :items [["Banho" "R$ 40,00"]]}
+                              {:title (:large-dog text)
+                               :image "/images/large-dog.png"
+                               :items [["Banho" "R$ 50,00"]]}]}) "contentpage"))

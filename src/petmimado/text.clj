@@ -53,9 +53,9 @@
    :our-customers-description "Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum."
 
    :testimonials ["É difícil encontrar um bom groomer que trata bem seu cão e sabe como dar um bom banho e corte! Claudia faz as duas coisas. Meu cão sempre fica muito cheiroso e dura a semana toda. Aliás ele ama ela."
-                  "Minha pequena é muito agitada e sempre sofreu indo aos pets shops, pois eu percebia que ela voltava muito triste"
-                  "É impressionante a paciência da Claudia, sempre dando pausas para que ela não fique estressada e fazendo tudo com muita calma. Minha pequena sempre volta feliz e com um quitute na boca....rs"
-                  "Depois que conheci a Claudia, não levo meu Ralph a nenhum outro lugar. O jeito amoroso e dedicado que ela o trata não tem comparação. Indico a todos que não querem levar seu bichinho a lugares que tratam nossas fofuras como mais um. Recomendo."]
+                  "Minha pequena é muito agitada e sempre sofreu indo aos pets shops, pois eu percebia que ela voltava muito triste. É impressionante a paciência da Claudia, sempre dando pausas para que ela não fique estressada e fazendo tudo com muita calma. Minha pequena sempre volta feliz e com um quitute na boca....rs"
+                  "Depois que conheci a Claudia, não levo meu Ralph a nenhum outro lugar. O jeito amoroso e dedicado que ela o trata não tem comparação. Indico a todos que não querem levar seu bichinho a lugares que tratam nossas fofuras como mais um. Recomendo."
+                  "Envie para nós o seu testimonial também"]
 
    :small-dog "Cachorro pequeno"
    :medium-dog "Cachorro médio"

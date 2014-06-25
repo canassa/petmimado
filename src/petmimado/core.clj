@@ -15,9 +15,10 @@
 
 (defn get-pages []
   (merge
-   {"/index.html" (pages/base pages/home "homepage")
+   {"/" (pages/base pages/home "homepage")
     (:contact urls) (pages/base pages/contact-us "contentpage")
-    (:about urls) (pages/base pages/about "contentpage")}
+    (:about urls) (pages/base pages/about "contentpage")
+    (:plans urls) pages/plans}
 
    (into {}
          (map (fn [service]
