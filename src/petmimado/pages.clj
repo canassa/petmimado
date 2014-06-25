@@ -135,35 +135,33 @@
      [:div.row
       [:div.col-md-3
        [:h6 "Um pouco sobre nós"]
-       [:p [:strong "Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat."]]
-       [:p "Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam."]]
+       [:p [:strong "Além de ter cursado Estética Pet, fez especializações como tosa na tesoura, tosa japonesa, tosa da raça, ocorrências veterinárias no banho e tosa."]]
+       [:p "Participou de Workshops com os principais Groomers do Brasil, como Flávio Fernandes e Willian Galharde."]]
       [:div.col-md-3.blog
        [:h6 "Blog"]
-       [:p.title [:a {:href "#" :title ""} "Em construção..."]]
+       [:p.title "Em construção..."]
        ;[:p "Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam."]
        ;[:p.title [:a {:href "#" :title ""} "Read this post&hellip;"]]
        ]
       [:div.col-md-3
        [:h6 "Você pode precisar disso"]
        [:ul
-        [:li [:a {:href "#" :title ""} "Home"]]
-        [:li [:a {:href "#" :title ""} "Contato"]]
-        [:li [:a {:href "#" :title ""} "FAQ"]]
-        [:li [:a {:href "#" :title ""} "Termos e Condições"]]
-        [:li [:a {:href "#" :title ""} "Política de Privacidade"]]]]
+        [:li [:a {:href "/" :title ""} "Home"]]
+        [:li [:a {:href (:about urls) :title ""} "Sobre nós"]]
+        [:li [:a {:href (:contact urls) :title ""} "Contato"]]]]
       [:div.col-md-3.contact-info
        [:h6 "Mantenha contato"]
-       [:p "Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum."]
+       [:p "Acompanhe Pet Mimado nas redes sociais"]
        [:p.social
-        [:a.facebook {:href "#"}]
-        [:a.pinterest {:href "#"}]
+        [:a.facebook {:href "https://www.facebook.com/patinhaefocinho"}]
+        ;[:a.pinterest {:href "#"}]
         [:a.twitter {:href "#"}]]
        [:p.c-details
-        [:span "Mail"] [:a {:href "#"} (:email text)] [:br]
+        [:span "Mail"] [:a {:href (str "mailto:" (:email text))} (:email text)] [:br]
         [:span "Tel"] (:phone text)]]]
      [:div.row
       [:div.col-md-12.copyright
-       [:p "&copy; Copyright 2014. All rights reserved." [:a {:href "#" :title ""} "PetMimado"]]]]]])
+       [:p "© Copyright 2014. Todos direitos reservados. " [:a {:href (:contact urls) :title ""} "PetMimado"]]]]]])
 
 (defn base [content page]
   (html5

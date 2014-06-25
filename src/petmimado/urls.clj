@@ -2,7 +2,7 @@
 
 (def urls
   {:home "/"
-   :contact "/contact/"
+   :contact "/contato/"
    :plans "/planos/"
    :about "/sobre/"
 
