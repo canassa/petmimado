@@ -278,8 +278,11 @@
                 [:div
                  [:img {:src image :alt title}]
                  [:h4 title]
-                 (map (fn [[desc value]]
-                        [:p (str desc " - ") [:span.per-night value]]) items)
+                 (map (fn [x]
+                        (apply
+                          (fn
+                            ([desc value] [:p (str desc " - ") [:span.per-night value]])
+                            ([desc] [:p desc])) x)) items)
                  [:form {:method "get"}
                   [:button {:type "submit" :class "btn btn-default btn-green"} "Agende agora"]]]])
              (:prices service))
@@ -427,18 +430,23 @@
 
 (def plans
   (base
-   (services-single {:key :bath
+   (services-single {:key :plans
                      :url (:bath urls)
-                     :title (:bath text)
-                     :short-description (:bath-short-description text)
-                     :description (:bath-description text)
+                     :title (:plans text)
+                     :description (:plans-description text)
+                     :image "/images/banho-e-tosa.jpg"
                      :icon-class "kennel-img"
-                     :prices [{:title (:small-dog text)
+                     :prices [{:title (:bronze-plan text)
                                :image "/images/small-dog.png"
-                               :items [["Banho" "R$ 30,00"]]}
-                              {:title (:medium-dog text)
+                               :items [["4 Banhos"]
+                                       ["1 Tosa higiênica"]]}
+                              {:title (:silver-plan text)
                                :image "/images/medium-dog.png"
-                               :items [["Banho" "R$ 40,00"]]}
-                              {:title (:large-dog text)
+                               :items [["4 Banhos"]
+                                       ["1 Tosa higiênica"]
+                                       ["1 Tosa geral"]]}
+                              {:title (:gold-plan text)
                                :image "/images/large-dog.png"
-                               :items [["Banho" "R$ 50,00"]]}]}) "contentpage"))
+                               :items [["4 Banhos"]
+                                       ["1 Tosa higiênica"]
+                                       ["1 Tosa geral"]]}]}) "contentpage"))

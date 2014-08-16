@@ -7,6 +7,11 @@
    :home-subtitle-2 "Para você que possuiu um Pet Shop e quer oferecer o melhor aos seus clientes, Pet Mimado oferece treinamento aos funcionários ensinando o passo a passo de todas as novidades que estão no mercado."
 
    :plans "Planos"
+   :plans-description ["O dono de um cão, além de desfrutar do prazer que o animal lhe proporciona é também o responsável pela manutenção dele. Banho e Tosa são itens fundamentais não só para a higiene como também para a saúde do animal, e a falta deles pode levar a doenças que podem provocar sérios problemas à saúde do animal."
+                       "Pensando nisso, Pet Mimado está oferecendo uma solução prática e com custo bastante acessível para a manutenção do seu pet, Entre em contato:"]
+   :bronze-plan "Plano Bronze"
+   :silver-plan "Plano Prata"
+   :gold-plan "Plano Ouro"
 
    :bath-and-gromming "Banho & Tosa"
    :bath-and-gromming-description ["A hora do banho, precisa ser algo relaxante e sem traumas para o animal. No salão Pet Mimado, utilizamos produtos e materiais de primeira linha, o que é importante para o bem estar do animal e sua segurança."
