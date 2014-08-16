@@ -11,7 +11,7 @@
 
 
 (defn get-assets []
-  (assets/load-assets "public" [#"\.(png|css|js)$"]))
+  (assets/load-assets "public" [#"\.(png|css|js|jpg)$"]))
 
 (defn get-pages []
   (merge

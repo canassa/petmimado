@@ -7,10 +7,7 @@
    :about "/sobre/"
 
    ;; Services
-   :gromming "/tosa/"
-   :bath "/banho/"
+   :bath-and-gromming "/banho-e-tosa/"
    :aesthetics "/estetica/"
-   :rabbits "/coelhos/"
-   :ferrets "/ferrets/"
-   :guinea-pig "/porquinho-da-india/"
+   :exotic "/exotic/"
    :training "/treinamento/"})

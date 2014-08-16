@@ -4,93 +4,107 @@
             [hiccup.page :refer [html5]]
             [hiccup.form :refer [form-to submit-button]]))
 
-(def services
-  [{:key :bath
-    :url (:bath urls)
-    :title (:bath text)
-    :short-description (:bath-short-description text)
-    :description (:bath-description text)
-    :icon-class "kennel-img"
-    :prices [{:title (:small-dog text)
-              :image "/images/small-dog.png"
-              :items [["Banho" "R$ 30,00"]]}
-             {:title (:medium-dog text)
-              :image "/images/medium-dog.png"
-              :items [["Banho" "R$ 40,00"]]}
-             {:title (:large-dog text)
-              :image "/images/large-dog.png"
-              :items [["Banho" "R$ 50,00"]]}]}
 
-   {:key :gromming
-    :url (:gromming urls)
-    :title (:gromming text)
-    :short-description (:gromming-short-description text)
-    :description (:gromming-description text)
+
+(def services
+  [{:key :bath-and-gromming
+    :url (:bath-and-gromming urls)
+    :title (:bath-and-gromming text)
+    :short-description (:bath-and-gromming-short-description text)
+    :description (:bath-and-gromming-description text)
     :icon-class "kennel-img"
-    :prices [{:title (:small-dog text)
+    :image "/images/banho-e-tosa.jpg"
+    :prices [{:title (:tiny-dog text)
               :image "/images/small-dog.png"
-              :items [["Tosa máquina" "R$ 20,00"]
-                      ["Tosa tesoura" "R$ 30,00"]
-                      ["Tosa padrão ou criativa" "R$ 40,00"]]}
-             {:title (:medium-dog text)
+              :items [["Banho" "R$ 25,00"]
+                      ["Tosa máquina" "R$ 42,00"]
+                      ["Tosa tesoura" "R$ 52,00"]
+                      ["Tosa higiênica" "R$ 8,00"]]}
+             {:title (:small-dog text)
               :image "/images/medium-dog.png"
-              :items [["Tosa máquina" "R$ 30,00"]
-                      ["Tosa tesoura" "R$ 40,00"]
-                      ["Tosa padrão ou criativa" "R$ 50,00"]]}
-             {:title (:large-dog text)
+              :items [["Banho" "R$ 27,00"]
+                      ["Tosa máquina" "R$ 44,00"]
+                      ["Tosa tesoura" "R$ 54,00"]
+                      ["Tosa higiênica" "R$ 10,00"]]}
+             {:title (:medium-dog text)
               :image "/images/large-dog.png"
-              :items [["Tosa máquina" "R$ 40,00"]
-                      ["Tosa tesoura" "R$ 50,00"]
-                      ["Tosa padrão ou criativa" "R$ 60,00"]]}]}
+              :items [["Banho" "R$ 29,00"]
+                      ["Tosa máquina" "R$ 49,00"]
+                      ["Tosa tesoura" "R$ 59,00"]
+                      ["Tosa higiênica" "R$ 12,00"]]}
+             {:title (:large-dog text)
+              :image "/images/xlarge-dog.png"
+              :items [["Banho" "R$ 31,00"]
+                      ["Tosa máquina" "R$ 51,00"]
+                      ["Tosa tesoura" "R$ 61,00"]
+                      ["Tosa higiênica" "R$ 14,00"]]}]}
 
    {:key :aesthetics
     :url (:aesthetics urls)
     :title (:aesthetics text)
     :short-description (:aesthetics-short-description text)
     :description (:aesthetics-description text)
+    :icon-class "kennel-img"
+    :image "/images/estetica.jpg"
+    :prices [{:title (:tiny-dog text)
+            :image "/images/small-dog.png"
+            :items [["Mechas" "R$ 3,00 por mecha"]
+                    ["Tingimento" "R$ 15,00"]
+                    ["Petcure" "R$ 5,00"]
+                    ["Penteados" "R$ 20,00 a R$ 30,00"]
+                    ["Escovas" "R$ 15,00"]
+                    ["Hidratações" "R$ 20,00"]
+                    ["Medicamentosos" "R$ 15,00"]
+                    ["Higiene Bucal" "R$ 7,00"]
+                    ["Tatuagens" "R$ 5,00"]]}
+           {:title (:small-dog text)
+            :image "/images/medium-dog.png"
+            :items [["Mechas" "R$ 3,00 por mecha"]
+                    ["Tingimento" "R$ 17,00"]
+                    ["Petcure" "R$ 5,00"]
+                    ["Penteados" "R$ 20,00 a R$ 30,00"]
+                    ["Escovas" "R$ 17,00"]
+                    ["Hidratações" "R$ 22,00"]
+                    ["Medicamentosos" "R$ 17,00"]
+                    ["Higiene Bucal" "R$ 9,00"]
+                    ["Tatuagens" "R$ 7,00"]]}
+           {:title (:medium-dog text)
+            :image "/images/large-dog.png"
+            :items [["Mechas" "R$ 3,00 por mecha"]
+                    ["Tingimento" "R$ 19,00"]
+                    ["Petcure" "R$ 5,00"]
+                    ["Penteados" "R$ 20,00 a R$ 30,00"]
+                    ["Escovas" "R$ 19,00"]
+                    ["Hidratações" "R$ 24,00"]
+                    ["Medicamentosos" "R$ 19,00"]
+                    ["Higiene Bucal" "R$ 11,00"]
+                    ["Tatuagens" "R$ 9,00"]]}
+           {:title (:large-dog text)
+            :image "/images/xlarge-dog.png"
+            :items [["Mechas" "R$ 3,00 por mecha"]
+                    ["Tingimento" "R$ 21,00"]
+                    ["Petcure" "R$ 5,00"]
+                    ["Penteados" "R$ 20,00 a R$ 30,00"]
+                    ["Escovas" "R$ 21,00"]
+                    ["Hidratações" "R$ 26,00"]
+                    ["Medicamentosos" "R$ 21,00"]
+                    ["Higiene Bucal" "R$ 13,00"]
+                    ["Tatuagens" "R$ 11,00"]]}]}
+
+   {:key :exotic
+    :url (:exotic urls)
+    :title (:exotic text)
+    :short-description (:exotic-short-description text)
+    :description (:exotic-description text)
+    :image "/images/coelho.jpg"
     :icon-class "kennel-img"}
-
-   {:key :rabbits
-    :url (:rabbits urls)
-    :title (:rabbits text)
-    :short-description (:rabbits-short-description text)
-    :description (:rabbits-description text)
-    :icon-class "kennel-img"
-    :prices [{:title (:bath text)
-              :image "/images/small-dog.png"
-              :items [[(:bath text) "R$ 30,00"]]}
-             {:title (:gromming text)
-              :image "/images/medium-dog.png"
-              :items [[(:gromming text) "R$ 40,00"]]}]}
-
-   {:key :ferrets
-    :url (:ferrets urls)
-    :title (:ferrets text)
-    :short-description (:ferrets-short-description text)
-    :description (:ferrets-description text)
-    :icon-class "kennel-img"
-    :prices [{:title (:bath text)
-              :image "/images/small-dog.png"
-              :items [[(:bath text) "R$ 30,00"]]}]}
-
-   {:key :guinea-pig
-    :url (:guinea-pig urls)
-    :title (:guinea-pig text)
-    :short-description (:guinea-pig-short-description text)
-    :description (:guinea-pig-description text)
-    :icon-class "kennel-img"
-    :prices [{:title (:bath text)
-              :image "/images/small-dog.png"
-              :items [[(:bath text) "R$ 30,00"]]}
-             {:title (:gromming text)
-              :image "/images/medium-dog.png"
-              :items [[(:gromming text) "R$ 40,00"]]}]}
 
    {:key :training
     :url (:training urls)
     :title (:training text)
     :short-description (:training-short-description text)
     :description (:training-description text)
+    :image "/images/treinamento.jpg"
     :icon-class "kennel-img"}
    ])
 
@@ -230,20 +244,20 @@
 (defn services-single [service]
   (list
    (navbar :white)
-   [:div.container
+   [:div#service-p1.container
     [:div.row.services-single
      [:div.col-md-6
-      [:img {:src "/images/dog-walking.png" :alt "Dog walking"}]]
+      [:img {:src (:image service) :alt (:title service)}]]
      [:div.col-md-6
       [:h2 (:title service)]
       (map (fn [p] [:p p]) (:description service))
       [:div.hours
        [:div
         [:p.day [:strong "Segunda à Sexta"]]
-        [:p.time [:strong "09:00 - 20:00"]]]
+        [:p.time [:strong "07:00 - 20:00"]]]
        [:div
         [:p.day [:strong "Sábado e Domingo"]]
-        [:p.time [:strong "11:00 - 20:00"]]]
+        [:p.time [:strong "8:00 - 20:00"]]]
        ]]]]
 
    ;; Prices
@@ -252,7 +266,7 @@
       [:div.container
        [:div.row
         (map (fn [{:keys [title image items]}]
-               [:div.col-md-4.costs
+               [:div.col-md-3.costs
                 [:div {:data-stellar-ratio "1.2" :data-stellar-vertical-offset "150" :data-stellar-horizontal-offset "0"}
                  [:img {:src image :alt title}]
                  [:h4 title]

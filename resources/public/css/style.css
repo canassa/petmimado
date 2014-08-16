@@ -804,7 +804,6 @@ img {
 	padding: 70px 0;
 	overflow: hidden;
 	min-height: 450px;
-	margin: 70px 0;
 }
 
 .prices.services {
@@ -873,6 +872,10 @@ img {
 }
 
 /**  SERVICES  **/
+
+#service-p1 {
+	padding-bottom: 40px;
+}
 
 .services-single {
 	margin-top: 70px;
