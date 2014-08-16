@@ -38,7 +38,7 @@
                   "Depois que conheci a Claudia, não levo meu Ralph a nenhum outro lugar. O jeito amoroso e dedicado que ela o trata não tem comparação. Indico a todos que não querem levar seu bichinho a lugares que tratam nossas fofuras como mais um. Recomendo."
                   "Envie para nós o seu testimonial também"]
 
-   :tiny-dog "Cachorro PP"
+   :tiny-dog "Cachorro micro"
    :small-dog "Cachorro pequeno"
    :medium-dog "Cachorro médio"
    :large-dog "Cachorro grande"

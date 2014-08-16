@@ -19,25 +19,29 @@
               :items [["Banho" "R$ 25,00"]
                       ["Tosa máquina" "R$ 42,00"]
                       ["Tosa tesoura" "R$ 52,00"]
-                      ["Tosa higiênica" "R$ 8,00"]]}
+                      ["Tosa da raça" "R$ 52,00"]
+                      ["Tosa higiênica" "R$ 12,00"]]}
              {:title (:small-dog text)
               :image "/images/medium-dog.png"
               :items [["Banho" "R$ 27,00"]
                       ["Tosa máquina" "R$ 44,00"]
                       ["Tosa tesoura" "R$ 54,00"]
-                      ["Tosa higiênica" "R$ 10,00"]]}
+                      ["Tosa da raça" "R$ 54,00"]
+                      ["Tosa higiênica" "R$ 12,00"]]}
              {:title (:medium-dog text)
               :image "/images/large-dog.png"
               :items [["Banho" "R$ 29,00"]
                       ["Tosa máquina" "R$ 49,00"]
                       ["Tosa tesoura" "R$ 59,00"]
+                      ["Tosa da raça" "R$ 59,00"]
                       ["Tosa higiênica" "R$ 12,00"]]}
              {:title (:large-dog text)
               :image "/images/xlarge-dog.png"
               :items [["Banho" "R$ 31,00"]
                       ["Tosa máquina" "R$ 51,00"]
                       ["Tosa tesoura" "R$ 61,00"]
-                      ["Tosa higiênica" "R$ 14,00"]]}]}
+                      ["Tosa da raça" "R$ 61,00"]
+                      ["Tosa higiênica" "R$ 12,00"]]}]}
 
    {:key :aesthetics
     :url (:aesthetics urls)
@@ -50,6 +54,7 @@
             :image "/images/small-dog.png"
             :items [["Mechas" "R$ 3,00 por mecha"]
                     ["Tingimento" "R$ 15,00"]
+                    ["Calterização" "R$ 20,00"]
                     ["Petcure" "R$ 5,00"]
                     ["Penteados" "R$ 20,00 a R$ 30,00"]
                     ["Escovas" "R$ 15,00"]
@@ -61,6 +66,7 @@
             :image "/images/medium-dog.png"
             :items [["Mechas" "R$ 3,00 por mecha"]
                     ["Tingimento" "R$ 17,00"]
+                    ["Calterização" "R$ 23,00"]
                     ["Petcure" "R$ 5,00"]
                     ["Penteados" "R$ 20,00 a R$ 30,00"]
                     ["Escovas" "R$ 17,00"]
@@ -72,6 +78,7 @@
             :image "/images/large-dog.png"
             :items [["Mechas" "R$ 3,00 por mecha"]
                     ["Tingimento" "R$ 19,00"]
+                    ["Calterização" "R$ 26,00"]
                     ["Petcure" "R$ 5,00"]
                     ["Penteados" "R$ 20,00 a R$ 30,00"]
                     ["Escovas" "R$ 19,00"]
@@ -83,6 +90,7 @@
             :image "/images/xlarge-dog.png"
             :items [["Mechas" "R$ 3,00 por mecha"]
                     ["Tingimento" "R$ 21,00"]
+                    ["Calterização" "R$ 30,00"]
                     ["Petcure" "R$ 5,00"]
                     ["Penteados" "R$ 20,00 a R$ 30,00"]
                     ["Escovas" "R$ 21,00"]
