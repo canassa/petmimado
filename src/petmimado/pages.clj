@@ -275,7 +275,7 @@
        [:div.row
         (map (fn [{:keys [title image items]}]
                [:div.col-md-3.costs
-                [:div {:data-stellar-ratio "1.2" :data-stellar-vertical-offset "150" :data-stellar-horizontal-offset "0"}
+                [:div
                  [:img {:src image :alt title}]
                  [:h4 title]
                  (map (fn [[desc value]]
