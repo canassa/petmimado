@@ -350,7 +350,8 @@
       [:p "Fazer Pawdicure que vai matar o fungo das patinhas e suavizar as almofadas do seu animal (ótimo para cães com alergias), ou obter um estilo completo com um corte de pelos a seu gosto. "]
       [:p "Durante a secagem os pets recebem uma massagem relaxante, os que podem e gostam se distraem com quitutes caninos."]
       [:p "Você pode optar por uma tosa padrão ( da raça) ou o serviço de styling criativo para aqueles que adoram dar um estilo único ao seu pet."]
-      [:p "Considere mechas coloridas, Soft Claws (Unhas de vinil), cauterização, pintura de unhas, tatuagens para todos, ou adicionar alguma cor a cauda do seu animal de estimação, orelhas, cabeça ou todo o seu corpo! Se você quiser, podemos fazê-lo, tudo que você tem a fazer é pedir!"]]
+      [:p "Considere mechas coloridas, Soft Claws (Unhas de vinil), cauterização, pintura de unhas, tatuagens para todos, ou adicionar alguma cor a cauda do seu animal de estimação, orelhas, cabeça ou todo o seu corpo! Se você quiser, podemos fazê-lo, tudo que você tem a fazer é pedir!"]
+      [:p "Forma de pagamento: Não trabalho com cartão e para facilitar o pagamento temos 3 opções, dinheiro, cheque ou doc antecipado! Trabalho com Citibank e Itaú."]]
      [:div.col-md-6
       [:h3 [:span "Política do Banho e Tosa"]]
       [:p "Pet Mimado é uma entidade privada e para manter as coisas acontecendo tranquilamente, pedimos que nossos clientes sigam estas regras:"]
