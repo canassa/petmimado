@@ -801,7 +801,7 @@ img {
 	background: #363b3f url("../images/prices-bg.png") 0 0 no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
-	padding: 70px 0;
+	padding: 30px 0;
 	overflow: hidden;
 	min-height: 450px;
 }
@@ -811,6 +811,8 @@ img {
 }
 
 .prices .costs {
+	margin-top: 10px;
+	margin-bottom: 10px;
 	position: relative;
 	-webkit-animation: FadeIn 1.5s normal; /* Safari 4+ */
 	-moz-animation:    FadeIn 1.5s normal; /* Fx 5+ */
@@ -835,8 +837,10 @@ img {
 .prices .costs div img {
 	position: absolute;
 	top: 10px;
-	margin-left: -25px;
-	left: 50%;
+	left: 0px;
+	right: 0px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .prices .costs div h4 {
@@ -869,6 +873,10 @@ img {
 
 .prices .costs div button {
 	width: 100%;
+}
+
+.prices .row {
+	margin: 0px -15px;
 }
 
 /**  SERVICES  **/

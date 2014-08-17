@@ -14,7 +14,7 @@
     :description (:bath-and-gromming-description text)
     :icon-class "kennel-img"
     :image "/images/banho-e-tosa.jpg"
-    :prices [{:title (:tiny-dog text)
+    :prices [[3 0 {:title (:tiny-dog text)
               :image "/images/small-dog.png"
               :items [["Banho" "R$ 25,00"]
                       ["Tosa máquina" "R$ 42,00"]
@@ -23,25 +23,33 @@
                       ["Tosa higiênica" "R$ 12,00"]]}
              {:title (:small-dog text)
               :image "/images/medium-dog.png"
-              :items [["Banho" "R$ 27,00"]
+              :items [["Banho" "R$ 30,00"]
                       ["Tosa máquina" "R$ 44,00"]
                       ["Tosa tesoura" "R$ 54,00"]
                       ["Tosa da raça" "R$ 54,00"]
                       ["Tosa higiênica" "R$ 12,00"]]}
              {:title (:medium-dog text)
               :image "/images/large-dog.png"
-              :items [["Banho" "R$ 29,00"]
+              :items [["Banho" "R$ 35,00"]
                       ["Tosa máquina" "R$ 49,00"]
                       ["Tosa tesoura" "R$ 59,00"]
                       ["Tosa da raça" "R$ 59,00"]
                       ["Tosa higiênica" "R$ 12,00"]]}
              {:title (:large-dog text)
               :image "/images/xlarge-dog.png"
-              :items [["Banho" "R$ 31,00"]
+              :items [["Banho" "R$ 40,00"]
                       ["Tosa máquina" "R$ 51,00"]
                       ["Tosa tesoura" "R$ 61,00"]
                       ["Tosa da raça" "R$ 61,00"]
-                      ["Tosa higiênica" "R$ 12,00"]]}]}
+                      ["Tosa higiênica" "R$ 12,00"]]}]
+             [4 4 {:title (:cats text)
+              :image "/images/cat.png"
+              :items [["Banho" "R$ 35,00"]
+                      ["Tosa geral" "R$ 50,00"]
+                      ["Tosa higiênica" "R$ 15,00"]
+                      ["Capa unhas (dianteiras)" "R$ 70,00"]
+                      ["Capa unhas (4 patas)" "R$ 140,00"]
+                      ["Reposição capa unha" "R$ 7,00"]]}]]}
 
    {:key :aesthetics
     :url (:aesthetics urls)
@@ -50,54 +58,54 @@
     :description (:aesthetics-description text)
     :icon-class "kennel-img"
     :image "/images/estetica.jpg"
-    :prices [{:title (:tiny-dog text)
+    :prices [[3 0 {:title (:tiny-dog text)
             :image "/images/small-dog.png"
             :items [["Mechas" "R$ 3,00 por mecha"]
-                    ["Tingimento" "R$ 15,00"]
-                    ["Calterização" "R$ 20,00"]
+                    ["Tingimento" "R$ 20,00"]
+                    ["Cauterização" "R$ 20,00"]
                     ["Petcure" "R$ 5,00"]
                     ["Penteados" "R$ 20,00 a R$ 30,00"]
-                    ["Escovas" "R$ 15,00"]
-                    ["Hidratações" "R$ 20,00"]
+                    ["Escovas" "R$ 25,00"]
+                    ["Hidratações" "R$ 25,00"]
                     ["Medicamentosos" "R$ 15,00"]
                     ["Higiene Bucal" "R$ 7,00"]
                     ["Tatuagens" "R$ 5,00"]]}
            {:title (:small-dog text)
             :image "/images/medium-dog.png"
             :items [["Mechas" "R$ 3,00 por mecha"]
-                    ["Tingimento" "R$ 17,00"]
-                    ["Calterização" "R$ 23,00"]
+                    ["Tingimento" "R$ 30,00"]
+                    ["Cauterização" "R$ 30,00"]
                     ["Petcure" "R$ 5,00"]
                     ["Penteados" "R$ 20,00 a R$ 30,00"]
-                    ["Escovas" "R$ 17,00"]
-                    ["Hidratações" "R$ 22,00"]
+                    ["Escovas" "R$ 35,00"]
+                    ["Hidratações" "R$ 35,00"]
                     ["Medicamentosos" "R$ 17,00"]
                     ["Higiene Bucal" "R$ 9,00"]
                     ["Tatuagens" "R$ 7,00"]]}
            {:title (:medium-dog text)
             :image "/images/large-dog.png"
             :items [["Mechas" "R$ 3,00 por mecha"]
-                    ["Tingimento" "R$ 19,00"]
-                    ["Calterização" "R$ 26,00"]
+                    ["Tingimento" "R$ 40,00"]
+                    ["Cauterização" "R$ 40,00"]
                     ["Petcure" "R$ 5,00"]
                     ["Penteados" "R$ 20,00 a R$ 30,00"]
-                    ["Escovas" "R$ 19,00"]
-                    ["Hidratações" "R$ 24,00"]
+                    ["Escovas" "R$ 45,00"]
+                    ["Hidratações" "R$ 45,00"]
                     ["Medicamentosos" "R$ 19,00"]
                     ["Higiene Bucal" "R$ 11,00"]
                     ["Tatuagens" "R$ 9,00"]]}
            {:title (:large-dog text)
             :image "/images/xlarge-dog.png"
             :items [["Mechas" "R$ 3,00 por mecha"]
-                    ["Tingimento" "R$ 21,00"]
-                    ["Calterização" "R$ 30,00"]
+                    ["Tingimento" "R$ 50,00"]
+                    ["Cauterização" "R$ 50,00"]
                     ["Petcure" "R$ 5,00"]
                     ["Penteados" "R$ 20,00 a R$ 30,00"]
-                    ["Escovas" "R$ 21,00"]
-                    ["Hidratações" "R$ 26,00"]
+                    ["Escovas" "R$ 55,00"]
+                    ["Hidratações" "R$ 55,00"]
                     ["Medicamentosos" "R$ 21,00"]
                     ["Higiene Bucal" "R$ 13,00"]
-                    ["Tatuagens" "R$ 11,00"]]}]}
+                    ["Tatuagens" "R$ 11,00"]]}]]}
 
    {:key :exotic
     :url (:exotic urls)
@@ -105,7 +113,21 @@
     :short-description (:exotic-short-description text)
     :description (:exotic-description text)
     :image "/images/coelho.jpg"
-    :icon-class "kennel-img"}
+    :icon-class "kennel-img"
+    :prices [[4 0 {:title (:rabbits text)
+                   :image "/images/coelho.png"
+                   :items [["Banho" "R$ 44,00"]
+                           ["Tosa geral" "R$ 50,00"]
+                           ["Tosa higiênica" "R$ 15,00"]]}
+                  {:title (:ferrets text)
+                   :image "/images/ferret.png"
+                   :items [["Banho" "R$ 30,00"]
+                           ["&nbsp"] ["&nbsp"]]}
+                  {:title (:guinea-pigs text)
+                   :image "/images/guinea-pig.png"
+                   :items [["Banho" "R$ 40,00"]
+                           ["Tosa" "R$ 50,00"]
+                           ["&nbsp"]]}]]}
 
    {:key :training
     :url (:training urls)
@@ -113,8 +135,7 @@
     :short-description (:training-short-description text)
     :description (:training-description text)
     :image "/images/treinamento.jpg"
-    :icon-class "kennel-img"}
-   ])
+    :icon-class "kennel-img"}])
 
 (defn navbar [& args]
   (let [nav-class (if (= (first args) :white)
@@ -156,7 +177,7 @@
     [:div.container
      [:div.row
       [:div.col-md-3
-       [:h6 "Um pouco sobre nós"]
+       [:h6 "Um pouco sobre a groomer"]
        [:p [:strong "Além de ter cursado Estética Pet, fez especializações como tosa na tesoura, tosa japonesa, tosa da raça, ocorrências veterinárias no banho e tosa."]]
        [:p "Participou de Workshops com os principais Groomers do Brasil, como Flávio Fernandes e Willian Galharde."]]
       [:div.col-md-3.blog
@@ -232,22 +253,27 @@
    [:div.container.content
     [:div.row
      [:div.col-md-9
-      [:form#contact_form {:role "form"}
+      [:form#contact_form {:role "form" :action "//forms.brace.io/contato@petmimado.com" :method "POST"}
        [:div.form-group
         [:label {:for "InputName"} "Seu nome"]
-        [:input#InputName.form-control {:type "text" :placeholder "Seu nome"}]]
+        [:input#InputName.form-control {:type "text" :placeholder "Seu nome" :name "Nome"}]]
        [:div.form-group
         [:label {:for "InputEmail"} "Seu email"]
-        [:input#InputEmail.form-control {:type "email" :placeholder "Seu email"}]]
+        [:input#InputEmail.form-control {:type "email" :placeholder "Seu email" :name "_replyto"}]]
        [:div.form-group
         [:label {:for "Message"} "Sua mensagem"]
-        [:textarea#Message.form-control {:placeholder "Sua mensagem" :rows 8}]]
+        [:textarea#Message.form-control {:placeholder "Sua mensagem" :rows 8 :name "Mensagem"}]]
        [:button.btn.btn-default.btn-green {:type "submit" } "Enviar"]]]
      [:div.col-md-3
       [:ul.contact-info
        [:li.telephone (:phone text)]
        [:li.address "R. Califórnia 693 São Paulo - SP"]
        [:li.mail (:email text)]]]]]))
+
+(defn get-fill-col-width
+  "Given a number of columns, returns a bootstrap column class that would fill the 12 column grid"
+  [num-columns]
+  (str "col-md-" (quot 12 num-columns)))
 
 (defn services-single [service]
   (list
@@ -272,21 +298,21 @@
    (when (:prices service)
      [:div.prices.services {:data-stellar-background-ratio ".3"}
       [:div.container
-       [:div.row
-        (map (fn [{:keys [title image items]}]
-               [:div.col-md-3.costs
-                [:div
-                 [:img {:src image :alt title}]
-                 [:h4 title]
-                 (map (fn [x]
-                        (apply
-                          (fn
-                            ([desc value] [:p (str desc " - ") [:span.per-night value]])
-                            ([desc] [:p desc])) x)) items)
-                 [:form {:method "get"}
-                  [:button {:type "submit" :class "btn btn-default btn-green"} "Agende agora"]]]])
-             (:prices service))
-        ]]])))
+       (map (fn [[column-size column-offset & service-row]]
+         [:div.row
+          (map-indexed (fn [idx {:keys [title image items]}]
+           [:div.costs {:class (str "col-md-" column-size
+                                    (when (zero? idx) (str " col-md-offset-" column-offset)))}
+            [:div
+             [:img {:src image :alt title}]
+             [:h4 title]
+             (map (fn [x] (apply (fn
+              ([desc value] [:p (str desc " - ") [:span.per-night value]])
+              ([desc] [:p desc])) x)) items)
+             [:form {:method "get"}
+             [:button {:type "submit" :class "btn btn-default btn-green"} "Agende agora"]]]])
+          service-row)]
+       ) (:prices service))]])))
 
 (def about
   (list
@@ -295,7 +321,7 @@
     [:div.row
      [:div.col-md-12.centered
       [:h3 [:span "Sobre nós"]]
-      [:p (:about-intro text)]]]]
+      (:about-intro text)]]]
    [:div.staff {:data-stellar-background-ratio ".3"}
     [:div.container
      [:div.row
@@ -434,19 +460,23 @@
                      :url (:bath urls)
                      :title (:plans text)
                      :description (:plans-description text)
-                     :image "/images/banho-e-tosa.jpg"
+                     :image "/images/planos.jpg"
                      :icon-class "kennel-img"
-                     :prices [{:title (:bronze-plan text)
-                               :image "/images/small-dog.png"
+                     :prices [[4 0 {:title (:bronze-plan text)
+                               :image "/images/medal-3rd.png"
                                :items [["4 Banhos"]
-                                       ["1 Tosa higiênica"]]}
+                                       ["1 Tosa higiênica"]
+                                       ["1 Hidratação"]
+                                       ["&nbsp;"]]}
                               {:title (:silver-plan text)
-                               :image "/images/medium-dog.png"
+                               :image "/images/medal-2nd.png"
                                :items [["4 Banhos"]
                                        ["1 Tosa higiênica"]
-                                       ["1 Tosa geral"]]}
+                                       ["1 Tosa geral"]
+                                       ["1 Hidratação"]]}
                               {:title (:gold-plan text)
-                               :image "/images/large-dog.png"
+                               :image "/images/medal-1st.png"
                                :items [["4 Banhos"]
-                                       ["1 Tosa higiênica"]
-                                       ["1 Tosa geral"]]}]}) "contentpage"))
+                                       ["2 Tosas higiênicas"]
+                                       ["1 Tosa da raça"]
+                                       ["1 Hidratação"]]}]]}) "contentpage"))

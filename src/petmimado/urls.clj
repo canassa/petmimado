@@ -9,5 +9,5 @@
    ;; Services
    :bath-and-gromming "/banho-e-tosa/"
    :aesthetics "/estetica/"
-   :exotic "/exotic/"
+   :exotic "/animais-exoticos/"
    :training "/treinamento/"})
