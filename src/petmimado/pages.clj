@@ -406,7 +406,7 @@
                             [:a.roundal {:class icon-class :href url :title title}]
                             [:h3 title]
                             [:p short-description]
-                            (saiba-mais "/" "btn-green")]) services)))
+                            (saiba-mais url "btn-green")]) services)))
     [:div.row
      [:div.col-md-12.centered
       [:h3 [:span (:our-customers text)]]
