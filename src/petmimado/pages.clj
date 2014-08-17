@@ -309,8 +309,9 @@
              (map (fn [x] (apply (fn
               ([desc value] [:p (str desc " - ") [:span.per-night value]])
               ([desc] [:p desc])) x)) items)
-             [:form {:method "get"}
-             [:button {:type "submit" :class "btn btn-default btn-green"} "Agende agora"]]]])
+             ;[:form {:method "get"}
+             ;[:button {:type "submit" :class "btn btn-default btn-green"} "Agende agora"]]
+             ]])
           service-row)]
        ) (:prices service))]])))
 
