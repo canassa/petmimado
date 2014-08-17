@@ -284,7 +284,7 @@
       [:img {:src (:image service) :alt (:title service)}]]
      [:div.col-md-6
       [:h2 (:title service)]
-      (map (fn [p] [:p p]) (:description service))
+      (:description service)
       [:div.hours
        [:div
         [:p.day [:strong "Segunda à Sexta"]]

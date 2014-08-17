@@ -7,31 +7,38 @@
    :home-subtitle-2 "Para você que possuiu um Pet Shop e quer oferecer o melhor aos seus clientes, Pet Mimado oferece treinamento aos funcionários ensinando o passo a passo de todas as novidades que estão no mercado."
 
    :plans "Planos"
-   :plans-description ["O dono de um cão, além de desfrutar do prazer que o animal lhe proporciona é também o responsável pela manutenção dele. Banho e Tosa são itens fundamentais não só para a higiene como também para a saúde do animal, e a falta deles pode levar a doenças que podem provocar sérios problemas à saúde do animal."
-                       "Pensando nisso, Pet Mimado está oferecendo uma solução prática e com custo bastante acessível para a manutenção do seu pet, Entre em contato:"]
+   :plans-description (list [:p "O dono de um cão, além de desfrutar do prazer que o animal lhe proporciona é também o responsável pela manutenção dele. Banho e Tosa são itens fundamentais não só para a higiene como também para a saúde do animal, e a falta deles pode levar a doenças que podem provocar sérios problemas à saúde do animal."]
+                            [:p "Pensando nisso, Pet Mimado está oferecendo uma solução prática e com custo bastante acessível para a manutenção do seu pet, Entre em contato:"])
    :bronze-plan "Plano Bronze"
    :silver-plan "Plano Prata"
    :gold-plan "Plano Ouro"
 
    :bath-and-gromming "Banho & Tosa"
-   :bath-and-gromming-description ["A hora do banho, precisa ser algo relaxante e sem traumas para o animal. No salão Pet Mimado, utilizamos produtos e materiais de primeira linha, o que é importante para o bem estar do animal e sua segurança."
-                                   "Com diversas opções disponíveis você pode escolher o melhor para o seu pet ou pedir orientação da Groommer para saber o que mais se adequa ao pelo e a pelagem do seu animal de estimação."
-                                   "A tosa de cães é, acima de tudo, uma questão de higiene e saúde, tanto para o animal, quanto para o seu dono, uma vez que o excesso de pelos pode gerar o acúmulo de fungos, bactérias e parasitas, nocivos para a saúde do bichinho e de seu dono."]
+   :bath-and-gromming-description (list [:p "A hora do banho, precisa ser algo relaxante e sem traumas para o animal. No salão Pet Mimado, utilizamos produtos e materiais de primeira linha, o que é importante para o bem estar do animal e sua segurança."]
+                                        [:p "Com diversas opções disponíveis você pode escolher o melhor para o seu pet ou pedir orientação da Groommer para saber o que mais se adequa ao pelo e a pelagem do seu animal de estimação."]
+                                        [:p "A tosa de cães é, acima de tudo, uma questão de higiene e saúde, tanto para o animal, quanto para o seu dono, uma vez que o excesso de pelos pode gerar o acúmulo de fungos, bactérias e parasitas, nocivos para a saúde do bichinho e de seu dono."])
    :bath-and-gromming-short-description "A hora do banho, precisa ser algo relaxante e sem traumas para o animal. No salão Pet Mimado, uso os melhores produtos pet do mercado..."
 
    :aesthetics "Estética"
-   :aesthetics-description ["Pet Mimado oferece serviços criativos para o seu animal de estimação se destacar! Já pensou em ir para casa com um poodle rosa ou um maltês com mechas? Ou quem sabe um cão com tatuagens? Há muitas opções quando se trata de preparação criativa."
-                            "É só dizer qual a sua idéia e nós vamos encontrar uma maneira de fazê-lo! (todo material usado é projetado especificamente para uso em animais de estimação não causando nenhum mal."]
+   :aesthetics-description (list [:p "Pet Mimado oferece serviços criativos para o seu animal de estimação se destacar! Já pensou em ir para casa com um poodle rosa ou um maltês com mechas? Ou quem sabe um cão com tatuagens? Há muitas opções quando se trata de preparação criativa."]
+                                 [:p "É só dizer qual a sua idéia e nós vamos encontrar uma maneira de fazê-lo! (todo material usado é projetado especificamente para uso em animais de estimação não causando nenhum mal."])
    :aesthetics-short-description "Já pensou em ir para casa com um poodle rosa ou um maltês com mechas? Ou quem sabe um cão com tatuagens? Há muitas opções quando se trata de preparação criativa..."
 
    :exotic "Animais exóticos"
-   :exotic-description ["A falta de higiene é a causa de muitos problemas de saúde em porquinhos-da-índia, coelhos e ferrets. Por isso manter uma boa escovação, banhos, corte de unhas é essencial."
-                        "Aqui você encontra banho com shampoo especializado, banho a seco, tosa na máquina e na tesoura"
-                        "Para o bem estar e segurança do seu pet, aceitamos apenas animais acostumados a serem manipulados"]
+   :exotic-description (list [:p "A falta de higiene é a causa de muitos problemas de saúde em porquinhos-da-índia, coelhos e ferrets. Por isso manter uma boa escovação, banhos, corte de unhas é essencial."]
+                             [:p "Aqui você encontra banho com shampoo especializado, banho a seco, tosa na máquina e na tesoura"]
+                             [:p "Para o bem estar e segurança do seu pet, aceitamos apenas animais acostumados a serem manipulados"])
    :exotic-short-description "A falta de higiene é a causa de muitos problemas de saúde em porquinhos-da-índia, coelhos e ferrets. Por isso manter uma boa escovação, banhos, corte de unhas é essencial..."
 
    :training "Treinamento"
-   :training-description ["Para você que possuiu um Pet Shop e quer oferecer o melhor aos seus clientes, Pet Mimado oferece treinamento aos funcionários ensinando o passo a passo de todas as novidades que estão no mercado. Nosso treinamento inclui: Manipulação correta dos pets, Quais os produtos certos para cada animal, Banho e tosa em coelhos e porquinho da índia, Banho em ferrets, procedimentos estéticos, Tosas criativas."]
+   :training-description (list [:p "Para você que possuiu um Pet Shop e quer oferecer o melhor aos seus clientes, Pet Mimado oferece treinamento aos funcionários ensinando o passo a passo de todas as novidades que estão no mercado. Nosso treinamento inclui:"]
+                               [:ul
+                                 [:li "Manipulação correta dos pets."]
+                                 [:li "Quais os produtos certos para cada animal."] 
+                                 [:li "Banho e tosa em coelhos e porquinho da índia."]
+                                 [:li "Banho em ferrets."]
+                                 [:li "Procedimentos estéticos."]
+                                 [:li "Tosas criativas."]])
    :training-short-description "A falta de higiene é a causa de muitos problemas de saúde em Porquinhos, por isso manter uma boa escovação, banhos, corte de unhas e aparar sua pelagem é essencial..."
 
 
