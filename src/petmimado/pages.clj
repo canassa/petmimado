@@ -198,7 +198,7 @@
        [:p.social
         [:a.facebook {:href "https://www.facebook.com/patinhaefocinho"}]
         ;[:a.pinterest {:href "#"}]
-        [:a.twitter {:href "#"}]]
+        [:a.twitter {:href "https://twitter.com/PMimado"}]]
        [:p.c-details
         [:span "Mail"] [:a {:href (str "mailto:" (:email text))} (:email text)] [:br]
         [:span "Tel"] (:phone text)]]]
@@ -329,7 +329,7 @@
       [:div.col-md-3.col-md-offset-2.member
        [:div {:data-stellar-ratio "1.2" :data-stellar-vertical-offset "150" :data-stellar-horizontal-offset "0"}
         [:span
-         [:a.twitter {:href "#"}]
+         [:a.twitter {:href "https://twitter.com/PMimado"}]
          [:a.facebook {:href "#"}]
          [:img {:src "/images/profile2.png" :alt ""}]]
         [:h4 "Maria Claudia"]
@@ -337,8 +337,8 @@
       [:div.col-md-3.member.col-md-offset-1.member
        [:div {:data-stellar-ratio "1.2" :data-stellar-vertical-offset "150" :data-stellar-horizontal-offset "0"}
         [:span
-         [:a.twitter {:href "#"}]
-         [:a.facebook {:href "#"}]
+         [:a.twitter {:href "https://twitter.com/ccanassa"}]
+         [:a.facebook {:href "https://www.facebook.com/cesar.canassa"}]
          [:img {:src "/images/profile3.png" :alt ""}]]
         [:h4 "Cesar Canassa"]
         [:p (:about-cesar text)]]]]]]
@@ -346,25 +346,25 @@
     [:div.row
      [:div.col-md-6
       [:h3 [:span "Sobre o nosso Banho & Tosa"]]
-      [:p "Nós oferecemos uma grande variedade de serviços de Pet Grooming para cuidar de seu animal de estimação. Experimente um banho relaxante de cupuaçu e maracujá ou uma hidratação de coco que irá adicionar a úmidade de volta para a pele e pelagem do seu animal de estimação. "]
+      [:p "Oferecemos uma grande variedade de serviços de Pet Grooming para cuidar de seu animal de estimação. Experimente um banho relaxante de cupuaçu e maracujá ou uma hidratação de coco que irá adicionar a úmidade de volta para a pele e pelagem do seu animal de estimação. "]
       [:p "Fazer Pawdicure que vai matar o fungo das patinhas e suavizar as almofadas do seu animal (ótimo para cães com alergias), ou obter um estilo completo com um corte de pelos a seu gosto. "]
       [:p "Durante a secagem os pets recebem uma massagem relaxante, os que podem e gostam se distraem com quitutes caninos."]
-      [:p "Você pode optar por uma tosa padrão ( da raça) ou o serviço de styling criativo para aqueles que adoram dar um estilo único ao seu pet."]
+      [:p "Você pode optar por uma tosa padrão (da raça) ou o serviço de styling criativo para aqueles que adoram dar um estilo único ao seu pet."]
       [:p "Considere mechas coloridas, Soft Claws (Unhas de vinil), cauterização, pintura de unhas, tatuagens para todos, ou adicionar alguma cor a cauda do seu animal de estimação, orelhas, cabeça ou todo o seu corpo! Se você quiser, podemos fazê-lo, tudo que você tem a fazer é pedir!"]
       [:p "Forma de pagamento: Não trabalho com cartão e para facilitar o pagamento temos 3 opções, dinheiro, cheque ou doc antecipado! Trabalho com Citibank e Itaú."]]
      [:div.col-md-6
       [:h3 [:span "Política do Banho e Tosa"]]
-      [:p "Pet Mimado é uma entidade privada e para manter as coisas acontecendo tranquilamente, pedimos que nossos clientes sigam estas regras:"]
+      [:p "Para manter as coisas acontecendo tranquilamente, peço que os clientes sigam estas regras:"]
       [:ol
-       [:li "Todos os animais devem estar em dia com sua carteirinha de vacinação e esta deve ser entregue a groomer no momento do banho e tosa."]
+       [:li "Todos os animais devem estar em dia com sua carteirinha de vacinação."]
        [:li "Os clientes devem chegar na hora, existindo uma tolerância de 10 minutos de atraso, caso ultrapasse este tempo seu horário será doado a outro cliente."]
        [:li "Todos os clientes devem fornecer, nome, telefone e e-mail para contato."]
        [:li "Os clientes devem buscar os pets no horário designado, existindo uma tolerância de 10 minutos, ultrapassando este tempo será cobrada taxa extra."]
        [:li "Cancelamentos devem ser feitos com 24 hrs de antecedência."]
-       [:li "Qualquer animal de estimação que se encontre com pulgas e carrapatos, será tratado com capstar, banho antipulgas e cobrado á parte."]
-       [:li "Por favor, informe-nos de qualquer problema de saúde que seu animal de estimação tenha, para que possamos mantê-lo o mais confortável possível."]
+       [:li "Qualquer animal de estimação que se encontre com pulgas ou carrapatos será tratado com capstar e será cobrado á parte."]
+       [:li "Por favor informe a grommer de qualquer problema de saúde que seu animal de estimação tenha, para que ela possa mantê-lo o mais confortável possível."]
        [:li "Não é permitido que o proprietário fique com o animal de estimação durante o banho e tosa. Isto é para a segurança de todos."]]
-      [:p "Se você tiver alguma dúvida ou preocupação , não hesite em perguntar! Essas políticas são feitas para manter todos seguros e felizes, e para assegurar que os nossos clientes não sejam incomodados."]]]]))
+      [:p "Se você tiver alguma dúvida ou preocupação, não hesite em perguntar! Essas políticas são feitas para manter todos seguros e felizes, e para assegurar que os nossos clientes não sejam incomodados."]]]]))
 
 
 (def home
@@ -379,13 +379,13 @@
    ;; Wrapper for slides
    [:div.carousel-inner
     [:div.item.active
-     [:img {:src "/images/2.png" :alt ""}]
+     [:img {:src "/images/bg-1.jpg" :alt ""}]
      [:div.carousel-caption
       [:h2 (:home-title-1 text)]
       [:p (:home-subtitle-1 text)]
-      (saiba-mais "/")]]
+      (saiba-mais (:about urls))]]
     [:div.item
-     [:img {:src "/images/3.png" :alt ""}]
+     [:img {:src "/images/bg-2.jpg" :alt ""}]
      [:div.carousel-caption
       [:h2 (:home-title-2 text)]
       [:p (:home-subtitle-2 text)]
@@ -418,23 +418,32 @@
     [:div#Wrapper
      [:div#carousel
       [:div
-       [:a.lightbox {:href "/images/dog-1.png" :title "Dog" :data-hover "Sandy the west highland terrier" :data-toggle "lightbox"}
-        [:img {:src "/images/dog-1.png" :alt "Dog"}]]]
+       [:a.lightbox {:href "/images/clientes/mell.jpg" :title "Mell" :data-hover "Mell, a Shih Tzu" :data-toggle "lightbox"}
+        [:img {:src "/images/clientes/mell.jpg" :alt "Mell"}]]]
       [:div
-       [:a.lightbox {:href "/images/dog-2.png" :title "Dog" :data-hover "Sandy the west highland terrier" :data-toggle "lightbox"}
-        [:img {:src "/images/dog-2.png" :alt "Dog"}]]]
+       [:a.lightbox {:href "/images/clientes/dominique.jpg" :title "Domique" :data-hover "Domique, a Maltês" :data-toggle "lightbox"}
+        [:img {:src "/images/clientes/dominique.jpg" :alt "Dog"}]]]
       [:div
-       [:a.lightbox {:href "/images/dog-3.png" :title "Dog" :data-hover "Sandy the west highland terrier" :data-toggle "lightbox"}
-        [:img {:src "/images/dog-3.png" :alt "Dog"}]]]
+       [:a.lightbox {:href "/images/clientes/damasco.jpg" :title "Damasco" :data-hover "Damasco, o Mastife" :data-toggle "lightbox"}
+        [:img {:src "/images/clientes/damasco.jpg" :alt "Dog"}]]]
       [:div
-       [:a.lightbox {:href "/images/dog-1.png" :title "Dog" :data-hover "Sandy the west highland terrier" :data-toggle "lightbox"}
-        [:img {:src "/images/dog-1.png" :alt "Dog"}]]]
+       [:a.lightbox {:href "/images/clientes/fred.jpg" :title "Fred" :data-hover "Fred, o Angorá" :data-toggle "lightbox"}
+        [:img {:src "/images/clientes/fred.jpg" :alt "Dog"}]]]
       [:div
-       [:a.lightbox {:href "/images/dog-2.png" :title "Dog" :data-hover "Sandy the west highland terrier" :data-toggle "lightbox"}
-        [:img {:src "/images/dog-2.png" :alt "Dog"}]]]
+       [:a.lightbox {:href "/images/clientes/bob.jpg" :title "Bob" :data-hover "Bob, o Yorkshire" :data-toggle "lightbox"}
+        [:img {:src "/images/clientes/bob.jpg" :alt "Dog"}]]]
       [:div
-       [:a.lightbox {:href "/images/dog-3.png" :title "Dog" :data-hover "Sandy the west highland terrier" :data-toggle "lightbox"}
-        [:img {:src "/images/dog-3.png" :alt "Dog"}]]]]
+       [:a.lightbox {:href "/images/clientes/mell.jpg" :title "Mell" :data-hover "Mell, a Shih Tzu" :data-toggle "lightbox"}
+        [:img {:src "/images/clientes/mell.jpg" :alt "Mell"}]]]
+      [:div
+       [:a.lightbox {:href "/images/clientes/dominique.jpg" :title "Domique" :data-hover "Domique, a Maltês" :data-toggle "lightbox"}
+        [:img {:src "/images/clientes/dominique.jpg" :alt "Dog"}]]]
+      [:div
+       [:a.lightbox {:href "/images/clientes/damasco.jpg" :title "Damasco" :data-hover "Damasco, o Mastife" :data-toggle "lightbox"}
+        [:img {:src "/images/clientes/damasco.jpg" :alt "Dog"}]]]
+      [:div
+       [:a.lightbox {:href "/images/clientes/fred.jpg" :title "Fred" :data-hover "Fred, o Angorá" :data-toggle "lightbox"}
+        [:img {:src "/images/clientes/fred.jpg" :alt "Dog"}]]]]
      [:div#pager.pager]]]
 
    ;; Testimonials
