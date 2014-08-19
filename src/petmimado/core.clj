@@ -8,11 +8,13 @@
             [optimus.assets :as assets]
             [optimus.optimizations :as optimizations]
             [optimus.export]
-            [optimus.strategies :refer [serve-live-assets]]))
+            [optimus.strategies :refer [serve-live-assets]]
+            [optimus-img-transform.core :refer [transform-images]]))
 
 (defn get-assets []
   (concat
     (assets/load-bundle "public" "main.css" ["/css/style.css"])
+    (assets/load-bundle "public" "main.js" ["/js/custom.js"])
     (assets/load-assets "public" [#"\.(png|css|js|jpg)$"])))
 
 (defn get-pages []
@@ -33,6 +35,16 @@
     (optimus.export/save-assets assets target-dir)
     (stasis/export-pages pages target-dir {:optimus-assets assets})))
 
+(defn optimize [assets options]
+  (-> assets
+      (transform-images {:regexp #"/images/bw/.*\.jpg"
+                         :quality 0.7
+                         :progressive true})
+      (transform-images {:regexp #"/images/masthead/.*\.jpg"
+                         :quality 0.7
+                         :progressive true})
+      (optimizations/none options)))
+
 (def app
   (->
     (stasis/serve-pages get-pages)
@@ -40,6 +52,6 @@
       ;; The function that loads the assets
       get-assets
       ;; The optimization function
-      optimizations/none
+      optimize
       ;; The strategy
       serve-live-assets)))

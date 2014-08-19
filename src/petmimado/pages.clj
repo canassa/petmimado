@@ -88,7 +88,7 @@
             :content "width=device-width, initial-scale=1.0"}]
     [:title "PetMimado | Tosa, Grooming"]
     [:link {:rel "stylesheet" :href "//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.0/css/bootstrap.min.css"}]
-    [:link {:rel "stylesheet" :href "/css/style.css"}]
+    (optimus.hiccup/link-to-css-bundles request ["main.css"])
     [:link {:rel "stylesheet" :href "http://fonts.googleapis.com/css?family=Cabin:400,500,600,700,400italic,500italic,600italic,700italic"}]
     [:link {:rel "stylesheet" :href "http://fonts.googleapis.com/css?family=Lato:300,400,700,900,400italic,700italic,900italic"}]]
    [:body {:class (:class options)}
@@ -100,7 +100,7 @@
     [:script {:src "//cdnjs.cloudflare.com/ajax/libs/stellar.js/0.6.2/jquery.stellar.min.js"}]
     [:script {:src "//cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/3.0.3a/ekko-lightbox.min.js"}]
     ;; [:script {:src "//cdnjs.cloudflare.com/ajax/libs/gmaps.js/0.4.12/gmaps.min.js"}]
-    [:script {:src "/js/custom.js"}]]))
+    (optimus.hiccup/link-to-js-bundles request ["main.js"])]))
 
 (defn saiba-mais
   ([url] (saiba-mais url "btn-lg"))
@@ -149,7 +149,7 @@
    [:div#service-p1.container
     [:div.row.services-single
      [:div.col-md-6
-      [:img {:src (:image service) :alt (:title service)}]]
+      [:img {:src (link/file-path request (:image service)) :alt (:title service)}]]
      [:div.col-md-6
       [:h2 (:title service)]
       (:description service)
@@ -199,7 +199,7 @@
         [:span
          [:a.twitter {:href "https://twitter.com/PMimado"}]
          [:a.facebook {:href "#"}]
-         [:img {:src "/images/profile2.png" :alt ""}]]
+         [:img {:src (link/file-path request "/images/profile2.png") :alt ""}]]
         [:h4 "Maria Claudia"]
         [:p (:about-maria text)]]]
       [:div.col-md-3.member.col-md-offset-1.member
@@ -207,7 +207,7 @@
         [:span
          [:a.twitter {:href "https://twitter.com/ccanassa"}]
          [:a.facebook {:href "https://www.facebook.com/cesar.canassa"}]
-         [:img {:src "/images/profile3.png" :alt ""}]]
+         [:img {:src (link/file-path request "/images/profile3.png") :alt ""}]]
         [:h4 "Cesar Canassa"]
         [:p (:about-cesar text)]]]]]]
    [:div.container.content
@@ -246,13 +246,13 @@
    ;; Wrapper for slides
    [:div.carousel-inner
     [:div.item.active
-     [:img {:src "/images/bg-1.jpg" :alt ""}]
+     [:img {:src (link/file-path request "/images/masthead/bg-1.jpg") :alt ""}]
      [:div.carousel-caption
       [:h2 (:home-title-1 text)]
       [:p (:home-subtitle-1 text)]
       (saiba-mais (:about urls))]]
     [:div.item
-     [:img {:src "/images/bg-2.jpg" :alt ""}]
+     [:img {:src (link/file-path request "/images/masthead/bg-2.jpg") :alt ""}]
      [:div.carousel-caption
       [:h2 (:home-title-2 text)]
       [:p (:home-subtitle-2 text)]
@@ -287,32 +287,32 @@
     [:div#Wrapper
      [:div#carousel
       [:div
-       [:a.lightbox {:href "/images/clientes/mell.jpg" :title "Mell" :data-hover "Mell, a Shih Tzu" :data-toggle "lightbox"}
-        [:img {:src "/images/clientes/mell.jpg" :alt "Mell"}]]]
+       [:a.lightbox {:href (link/file-path request "/images/clientes/mell.jpg") :title "Mell" :data-hover "Mell, a Shih Tzu" :data-toggle "lightbox"}
+        [:img {:src (link/file-path request "/images/clientes/mell.jpg") :alt "Mell"}]]]
       [:div
-       [:a.lightbox {:href "/images/clientes/dominique.jpg" :title "Domique" :data-hover "Domique, a Maltês" :data-toggle "lightbox"}
-        [:img {:src "/images/clientes/dominique.jpg" :alt "Dog"}]]]
+       [:a.lightbox {:href (link/file-path request "/images/clientes/dominique.jpg") :title "Domique" :data-hover "Domique, a Maltês" :data-toggle "lightbox"}
+        [:img {:src (link/file-path request "/images/clientes/dominique.jpg") :alt "Dog"}]]]
       [:div
-       [:a.lightbox {:href "/images/clientes/damasco.jpg" :title "Damasco" :data-hover "Damasco, o Mastife" :data-toggle "lightbox"}
-        [:img {:src "/images/clientes/damasco.jpg" :alt "Dog"}]]]
+       [:a.lightbox {:href (link/file-path request "/images/clientes/damasco.jpg") :title "Damasco" :data-hover "Damasco, o Mastife" :data-toggle "lightbox"}
+        [:img {:src (link/file-path request "/images/clientes/damasco.jpg") :alt "Dog"}]]]
       [:div
-       [:a.lightbox {:href "/images/clientes/fred.jpg" :title "Fred" :data-hover "Fred, o Angorá" :data-toggle "lightbox"}
-        [:img {:src "/images/clientes/fred.jpg" :alt "Dog"}]]]
+       [:a.lightbox {:href (link/file-path request "/images/clientes/fred.jpg") :title "Fred" :data-hover "Fred, o Angorá" :data-toggle "lightbox"}
+        [:img {:src (link/file-path request "/images/clientes/fred.jpg") :alt "Dog"}]]]
       [:div
-       [:a.lightbox {:href "/images/clientes/bob.jpg" :title "Bob" :data-hover "Bob, o Yorkshire" :data-toggle "lightbox"}
-        [:img {:src "/images/clientes/bob.jpg" :alt "Dog"}]]]
+       [:a.lightbox {:href (link/file-path request "/images/clientes/bob.jpg") :title "Bob" :data-hover "Bob, o Yorkshire" :data-toggle "lightbox"}
+        [:img {:src (link/file-path request "/images/clientes/bob.jpg") :alt "Dog"}]]]
       [:div
-       [:a.lightbox {:href "/images/clientes/mell.jpg" :title "Mell" :data-hover "Mell, a Shih Tzu" :data-toggle "lightbox"}
-        [:img {:src "/images/clientes/mell.jpg" :alt "Mell"}]]]
+       [:a.lightbox {:href (link/file-path request "/images/clientes/mell.jpg") :title "Mell" :data-hover "Mell, a Shih Tzu" :data-toggle "lightbox"}
+        [:img {:src (link/file-path request "/images/clientes/mell.jpg") :alt "Mell"}]]]
       [:div
-       [:a.lightbox {:href "/images/clientes/dominique.jpg" :title "Domique" :data-hover "Domique, a Maltês" :data-toggle "lightbox"}
-        [:img {:src "/images/clientes/dominique.jpg" :alt "Dog"}]]]
+       [:a.lightbox {:href (link/file-path request "/images/clientes/dominique.jpg") :title "Domique" :data-hover "Domique, a Maltês" :data-toggle "lightbox"}
+        [:img {:src (link/file-path request "/images/clientes/dominique.jpg") :alt "Dog"}]]]
       [:div
-       [:a.lightbox {:href "/images/clientes/damasco.jpg" :title "Damasco" :data-hover "Damasco, o Mastife" :data-toggle "lightbox"}
-        [:img {:src "/images/clientes/damasco.jpg" :alt "Dog"}]]]
+       [:a.lightbox {:href (link/file-path request "/images/clientes/damasco.jpg") :title "Damasco" :data-hover "Damasco, o Mastife" :data-toggle "lightbox"}
+        [:img {:src (link/file-path request "/images/clientes/damasco.jpg") :alt "Dog"}]]]
       [:div
-       [:a.lightbox {:href "/images/clientes/fred.jpg" :title "Fred" :data-hover "Fred, o Angorá" :data-toggle "lightbox"}
-        [:img {:src "/images/clientes/fred.jpg" :alt "Dog"}]]]]
+       [:a.lightbox {:href (link/file-path request "/images/clientes/fred.jpg") :title "Fred" :data-hover "Fred, o Angorá" :data-toggle "lightbox"}
+        [:img {:src (link/file-path request "/images/clientes/fred.jpg") :alt "Dog"}]]]]
      [:div#pager.pager]]]
 
    ;; Testimonials
