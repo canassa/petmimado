@@ -293,7 +293,7 @@
        [:a.lightbox {:href (link/file-path request "/images/clientes/dominique.jpg") :title "Domique" :data-hover "Domique, a Maltês" :data-toggle "lightbox"}
         [:img {:src (link/file-path request "/images/clientes/dominique.jpg") :alt "Dog"}]]]
       [:div
-       [:a.lightbox {:href (link/file-path request "/images/clientes/damasco.jpg") :title "Damasco" :data-hover "Damasco, o Mastife" :data-toggle "lightbox"}
+       [:a.lightbox {:href (link/file-path request "/images/clientes/damasco.jpg") :title "Damasco" :data-hover "Damasco, o Mastiff" :data-toggle "lightbox"}
         [:img {:src (link/file-path request "/images/clientes/damasco.jpg") :alt "Dog"}]]]
       [:div
        [:a.lightbox {:href (link/file-path request "/images/clientes/fred.jpg") :title "Fred" :data-hover "Fred, o Angorá" :data-toggle "lightbox"}
