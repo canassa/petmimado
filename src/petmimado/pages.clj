@@ -302,8 +302,8 @@
        [:a.lightbox {:href (link/file-path request "/images/clientes/bob.jpg") :title "Bob" :data-hover "Bob, o Yorkshire" :data-toggle "lightbox"}
         [:img {:src (link/file-path request "/images/clientes/bob.jpg") :alt "Dog"}]]]
       [:div
-       [:a.lightbox {:href (link/file-path request "/images/clientes/mell.jpg") :title "Mell" :data-hover "Mell, a Shih Tzu" :data-toggle "lightbox"}
-        [:img {:src (link/file-path request "/images/clientes/mell.jpg") :alt "Mell"}]]]
+       [:a.lightbox {:href (link/file-path request "/images/clientes/ninao.jpg") :title "Ninão" :data-hover "Ninão, o Lionhead" :data-toggle "lightbox"}
+        [:img {:src (link/file-path request "/images/clientes/ninao.jpg") :alt "Mell"}]]]
       [:div
        [:a.lightbox {:href (link/file-path request "/images/clientes/dominique.jpg") :title "Domique" :data-hover "Domique, a Maltês" :data-toggle "lightbox"}
         [:img {:src (link/file-path request "/images/clientes/dominique.jpg") :alt "Dog"}]]]
