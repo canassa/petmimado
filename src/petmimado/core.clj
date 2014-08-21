@@ -27,14 +27,6 @@
    (:exotic urls) #(pages/base % (partial pages/services-single services/exotic) {:class "contentpage"})
    (:training urls) #(pages/base % (partial pages/services-single services/training) {:class "contentpage"})})
 
-(defn export []
-  (let [assets (optimizations/none (get-assets) {})
-        pages (get-pages)
-        target-dir "build"]
-    (stasis/empty-directory! target-dir)
-    (optimus.export/save-assets assets target-dir)
-    (stasis/export-pages pages target-dir {:optimus-assets assets})))
-
 (defn optimize [assets options]
   (-> assets
       (transform-images {:regexp #"/images/bw/.*\.jpg"
@@ -43,7 +35,15 @@
       (transform-images {:regexp #"/images/masthead/.*\.jpg"
                          :quality 0.7
                          :progressive true})
-      (optimizations/none options)))
+      (optimizations/all options)))
+
+(defn export []
+  (let [assets (optimize (get-assets) {})
+        pages (get-pages)
+        target-dir "build"]
+    (stasis/empty-directory! target-dir)
+    (optimus.export/save-assets assets target-dir)
+    (stasis/export-pages pages target-dir {:optimus-assets assets})))
 
 (def app
   (->
