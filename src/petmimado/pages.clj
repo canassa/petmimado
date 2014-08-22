@@ -325,7 +325,8 @@
          [:li.active {:data-target "#home_testimonial" :data-slide-to "0"}]
          [:li {:data-target "#home_testimonial" :data-slide-to "1"}]
          [:li {:data-target "#home_testimonial" :data-slide-to "2"}]
-         [:li {:data-target "#home_testimonial" :data-slide-to "3"}]]
+         [:li {:data-target "#home_testimonial" :data-slide-to "3"}]
+         [:li {:data-target "#home_testimonial" :data-slide-to "4"}]]
         [:div.carousel-inner
          [:div.item.active
           [:p (first (:testimonials text))]]
