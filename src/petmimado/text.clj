@@ -67,6 +67,6 @@
 
    :about-intro (list [:p "Pet Mimado surgiu com uma nova proposta, unir a beleza ao bem estar. Estamos sempre preocupados em atender seu melhor amigo com todo conforto e segurança, para que você possa acompanhar todo o processo ao vivo é só acessar o site <a href=\"http://www.bambuser.com\" target=\"_blank\">www.bambuser.com</a> e fazer o login com o usuário e senha que deve ser solicitado a Groomer."]
                       [:p "Para sua comodidade a groomer leva e busca os pets caso seja solicitado, o valor do transporte varia de acordo com o CEP"])
-   :about-cesar "Cesar é programador, legal, web designer e fotógrafo. Ele é responsável pela concepção, criação e manutenção do site petmimado.com"
+   :about-cesar "Cesar é programador, web designer e fotógrafo. Ele é responsável pela concepção, criação e manutenção do site petmimado.com"
    :about-maria "Além de ter cursado Estética Pet, fez especializações como tosa na tesoura, tosa japonesa, tosa da raça, ocorrências veterinárias no banho e tosa. Participou de Workshops com os principais Groomers do Brasil, como Flávio Fernandes e Willian Galharde."
    })
