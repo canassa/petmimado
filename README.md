@@ -1,5 +1,7 @@
 # petmimado.com website
 
+[ ![Codeship Status for canassa/petmimado](https://codeship.io/projects/73ffde10-1c24-0132-1b46-26aa888cf13f/status)](https://codeship.io/projects/35128)
+
 The http://petmimado.com website, implemented as a generated static site using
 [Stasis](https://github.com/magnars/stasis/) with frontend optimization using
 [Optimus](https://github.com/magnars/optimus) and [Hiccup](https://github.com/weavejester/hiccup)
